@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>TAQ | Distribución Oficial Nestlé & Alpura</title>
+  <!-- Bootstrap 5 CSS + Icons + Font Awesome (para iconos sociales) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <!-- Google Fonts: tipografía moderna y profesional -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      font-family: 'Inter', sans-serif;
+    }
+    body {
+      background-color: #fefefe;
+      scroll-behavior: smooth;
+    }
+    /* Efectos y sombras sutiles */
+    .navbar {
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.02);
+      transition: all 0.2s ease;
+    }
+    .hero-section {
+      background: linear-gradient(135deg, #f8f9fc 0%, #eef2f7 100%);
+      border-bottom: 1px solid rgba(0,0,0,0.05);
+    }
+    .brand-logo-text {
+      font-weight: 800;
+      letter-spacing: -0.5px;
+    }
+    .btn-whatsapp-fixed {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      background-color: #25D366;
+      color: white;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 32px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+      transition: all 0.2s ease-in-out;
+      z-index: 1040;
+      text-decoration: none;
+      border: none;
+    }
+    .btn-whatsapp-fixed:hover {
+      background-color: #20b859;
+      transform: scale(1.07);
+      color: white;
+      box-shadow: 0 15px 25px rgba(0,0,0,0.25);
+    }
+    .card-prod {
+      border: none;
+      border-radius: 1.5rem;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 12px 28px -8px rgba(0,0,0,0.08);
+    }
+    .card-prod:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 32px -12px rgba(0,0,0,0.12);
+    }
+    .card-prod img {
+      border-top-left-radius: 1.5rem;
+      border-top-right-radius: 1.5rem;
+      object-fit: cover;
+      height: 220px;
+      background-color: #f2f2f2;
+    }
+    .section-title {
+      font-weight: 700;
+      position: relative;
+      display: inline-block;
+      margin-bottom: 1rem;
+    }
+    .section-title:after {
+      content: '';
+      position: absolute;
+      bottom: -12px;
+      left: 0;
+      width: 70px;
+      height: 3px;
+      background: #dc3545;
+      border-radius: 3px;
+    }
+    .contact-form {
+      background: white;
+      border-radius: 2rem;
+      box-shadow: 0 20px 35px -12px rgba(0,0,0,0.1);
+    }
+    footer {
+      background-color: #0a2b3e;
+      color: #e0e7ed;
+    }
+    .brand-color-nestle {
+      color: #C22B2B;
+    }
+    .brand-color-alpura {
+      color: #0066B3;
+    }
+    .btn-outline-custom {
+      border-radius: 40px;
+      padding: 8px 24px;
+      font-weight: 500;
+    }
+    .btn-primary-custom {
+      background: #0a2b3e;
+      border: none;
+      border-radius: 40px;
+      padding: 10px 28px;
+      font-weight: 600;
+      transition: all 0.2s;
+    }
+    .btn-primary-custom:hover {
+      background: #173e54;
+      transform: translateY(-2px);
+    }
+    @media (max-width: 768px) {
+      .btn-whatsapp-fixed {
+        width: 52px;
+        height: 52px;
+        font-size: 28px;
+        bottom: 20px;
+        right: 20px;
+      }
+      .hero-section h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Barra de navegación profesional -->
+<nav class="navbar navbar-expand-lg bg-white py-3 sticky-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold fs-4" href="#">
+      <span class="brand-logo-text">TAQ</span> <span class="fw-normal text-secondary">| Distribuciones</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarMain">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-2">
+        <li class="nav-item"><a class="nav-link fw-semibold" href="#inicio">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link fw-semibold" href="#productos">Productos</a></li>
+        <li class="nav-item"><a class="nav-link fw-semibold" href="#nosotros">Nosotros</a></li>
+        <li class="nav-item"><a class="nav-link fw-semibold" href="#contacto">Contacto</a></li>
+      </ul>
+      <a href="#contacto" class="btn btn-danger rounded-pill ms-lg-3 px-4">Cotizar <i class="bi bi-arrow-right-short"></i></a>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero / Inicio -->
+<section id="inicio" class="hero-section py-5">
+  <div class="container py-md-4">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-6">
+        <span class="badge bg-danger bg-opacity-10 text-danger rounded-pill px-3 py-2 mb-3 fw-semibold"><i class="bi bi-truck"></i> Distribución mayorista y minorista</span>
+        <h1 class="display-4 fw-bold mb-3">Líderes en <span class="brand-color-nestle">Nestlé</span> & <span class="brand-color-alpura">Alpura</span></h1>
+        <p class="lead text-secondary mb-4">Somos TAQ, tu socio comercial de confianza. Ofrecemos productos de alta calidad con cobertura nacional, precios competitivos y entregas garantizadas.</p>
+        <div class="d-flex flex-wrap gap-3">
+          <a href="#productos" class="btn btn-primary-custom text-white px-4 py-2 rounded-pill">Ver catálogo <i class="bi bi-box-seam"></i></a>
+          <a href="#contacto" class="btn btn-outline-secondary rounded-pill px-4 py-2">Solicitar información</a>
+        </div>
+        <div class="mt-4 d-flex gap-4 align-items-center">
+          <div><i class="bi bi-patch-check-fill text-success me-1"></i> <span class="fw-semibold">+200 clientes</span></div>
+          <div><i class="bi bi-geo-alt-fill text-primary me-1"></i> <span class="fw-semibold">Envíos a todo el país</span></div>
+        </div>
+      </div>
+      <div class="col-lg-6 text-center">
+        <img src="https://placehold.co/600x450/FFF4E6/343a40?text=TAQ+Distribuciones&font=montserrat" alt="Distribución TAQ" class="img-fluid rounded-4 shadow-lg" style="max-height: 380px; width: auto; object-fit: cover;">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Sección de productos: Nestlé y Alpura -->
+<section id="productos" class="py-5 bg-light">
+  <div class="container py-4">
+    <div class="text-center mb-5">
+      <h2 class="section-title text-center" style="display: inline-block;">Productos destacados</h2>
+      <p class="text-muted mt-3">Las marcas líderes que distribuimos con excelente servicio</p>
+    </div>
+
+    <!-- Fila de productos Nestlé -->
+    <div class="mb-5">
+      <div class="d-flex align-items-center gap-2 mb-4">
+        <i class="bi bi-cup-straw fs-2 text-danger"></i>
+        <h3 class="fw-semibold mb-0">Nestlé <span class="fs-6 text-muted">| Calidad y tradición</span></h3>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-3">
+          <div class="card card-prod h-100">
+            <img src="https://placehold.co/400x250/FFEDE6/C22B2B?text=Nescafé&font=montserrat" class="card-img-top" alt="Nescafé">
+            <div class="card-body">
+              <h5 class="card-title fw-bold">Nescafé Tradición</h5>
+              <p class="card-text text-secondary small">Café soluble 100% puro, presentación 170g y 340g. Ideal para hogar y oficina.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="fw-bold text-danger">Precio por caja</span>
+                <span class="badge bg-danger bg-opacity-10 text-danger rounded-pill">Nestlé</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="card card-prod h-100">
+            <img src="https://placehold.co/400x250/FFEDE6/C22B2B?text=Lechera&font=montserrat" class="card-img-top" alt="Lechera">
+            <div class="card-body">
+              <h5 class="card-title fw-bold">Lechera®</h5>
+              <p class="card-text text-secondary small">Leche condensada, ideal para postres. Frasco 395g, presentación individual y pack 12u.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="fw-bold text-danger">Oferta distribuidor</span>
+                <span class="badge bg-danger bg-opacity-10 text-danger rounded-pill">Nestlé</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="card card-prod h-100">
+            <img src="https://placehold.co/400x250/FFEDE6/C22B2B?text=Chocapic&font=montserrat" class="card-img-top" alt="Chocapic">
+            <div class="card-body">
+              <h5 class="card-title fw-bold">Chocapic® Cereal</h5>
+              <p class="card-text text-secondary small">Cereal de trigo con chocolate, caja 350g y presentación económica 500g.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="fw-bold text-danger">Pronto reabastecimiento</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="card card-prod h-100">
+            <img src="https://placehold.co/400x250/FFEDE6/C22B2B?text=Maggi&font=montserrat" class="card-img-top" alt="Maggi">
+            <div class="card-body">
+              <h5 class="card-title fw-bold">Maggi® Sabor</h5>
+              <p class="card-text text-secondary small">Caldos y sopas deshidratadas, variedad de sabores. Ideal para food service.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="fw-bold text-danger">Venta por mayoreo</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Fila de productos Alpura -->
+    <div>
+      <div class="d-flex align-items-center gap-2 mb-4 mt-2">
+        <i class="bi bi-droplet fs-2 text-primary"></i>
+        <h3 class="fw-semibold mb-0">Alpura <span class="fs-6 text-muted">| Lácteos de excelencia</span></h3>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-3">
+          <div class="card card-prod h-100">
+            <img src="https://placehold.co/400x250/E6F2FF/0066B3?text=Leche+Alpura&font=montserrat" class="card-img-top" alt="Leche Alpura">
+            <div class="card-body">
+              <h5 class="card-title fw-bold">Leche Entera Alpura</h5>
+              <p class="card-text text-secondary small">Leche pasteurizada 1 litro, fuente de calcio y vitaminas. Caja con 12 piezas.</p>
+              <div class="d-flex justify-content-between">
+                <span class="fw-bold text-primary">Precio competitivo</span>
+                <span class="badge bg-primary bg-opacity-10 text-primary rounded-pill">Alpura</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="card card-prod h-100">
+            <img src="https://placehold.co/400x250/E6F2FF/0066B3?text=Yogurt+Alpura&font=montserrat" class="card-img-top" alt="Yogurt Alpura">
+            <div class="card-body">
+              <h5 class="card-title fw-bold">Yogurt Natural Alpura</h5>
+              <p class="card-text text-secondary small">Probióticos y sabor suave. Presentación 1kg ideal para negocios.</p>
+              <div class="d-flex justify-content-between">
+                <span class="fw-bold text-primary">Alta rotación</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="card card-prod h-100">
+            <img src="https://placehold.co/400x250/E6F2FF/0066B3?text=Crema+Alpura&font=montserrat" class="card-img-top" alt="Crema Alpura">
+            <div class="card-body">
+              <h5 class="card-title fw-bold">Crema Ácida Alpura</h5>
+              <p class="card-text text-secondary small">Textura suave, 250ml. Ideal para cocina y repostería gourmet.</p>
+              <div class="d-flex justify-content-between">
+                <span class="fw-bold text-primary">Envío inmediato</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="card card-prod h-100">
+            <img src="https://placehold.co/400x250/E6F2FF/0066B3?text=Queso+Alpura&font=montserrat" class="card-img-top" alt="Queso Alpura">
+            <div class="card-body">
+              <h5 class="card-title fw-bold">Queso Manchego</h5>
+              <p class="card-text text-secondary small">Queso madurado, sabor auténtico. Presentación 400g.</p>
+              <div class="d-flex justify-content-between">
+                <span class="fw-bold text-primary">Premium</span>
+                <span class="badge bg-primary bg-opacity-10 text-primary rounded-pill">Alpura</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="text-center mt-5">
+      <a href="#contacto" class="btn btn-outline-danger rounded-pill px-5 py-2 fw-semibold">Ver catálogo completo <i class="bi bi-arrow-right-circle"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- Nosotros: breve misión / valores -->
+<section id="nosotros" class="py-5">
+  <div class="container py-4">
+    <div class="row align-items-center">
+      <div class="col-lg-6 mb-4 mb-lg-0">
+        <span class="badge bg-dark bg-opacity-10 text-dark rounded-pill mb-3">Quiénes somos</span>
+        <h2 class="fw-bold mb-3">Comprometidos con el abasto y la calidad</h2>
+        <p class="text-secondary">TAQ nace como una empresa comercializadora con el objetivo de ofrecer a negocios y mayoristas los productos más demandados de Nestlé y Alpura. Contamos con cadena de suministro eficiente, precios justos y atención personalizada.</p>
+        <div class="row mt-4">
+          <div class="col-md-6 mb-3">
+            <div class="d-flex gap-2">
+              <i class="bi bi-check-circle-fill text-danger fs-4"></i>
+              <div><strong>+10 años de experiencia</strong><br><small class="text-secondary">Respaldo en distribución B2B</small></div>
+            </div>
+          </div>
+          <div class="col-md-6 mb-3">
+            <div class="d-flex gap-2">
+              <i class="bi bi-shield-check text-danger fs-4"></i>
+              <div><strong>Garantía de frescura</strong><br><small class="text-secondary">Productos directo de fábrica</small></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="bg-white p-4 rounded-4 shadow-sm">
+          <div class="d-flex gap-3 align-items-center border-bottom pb-3 mb-3">
+            <i class="bi bi-trophy-fill fs-1 text-warning"></i>
+            <div><h5 class="mb-0 fw-bold">Distribuidores autorizados</h5><span class="text-muted small">Certificados por Nestlé y Alpura</span></div>
+          </div>
+          <p>Nuestro compromiso es entregar puntualmente cada pedido, brindar asesoría comercial y garantizar la mejor experiencia a nuestros clientes. Somos el puente confiable entre las grandes marcas y tu negocio.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Formulario de contacto + Mapa / Detalles -->
+<section id="contacto" class="py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="section-title text-center" style="display: inline-block;">Hablemos de negocios</h2>
+      <p class="text-muted mt-3">Cuéntanos tus requerimientos, te asesoramos sin compromiso</p>
+    </div>
+    <div class="row g-5">
+      <div class="col-lg-6">
+        <div class="contact-form p-4 p-md-5">
+          <h4 class="fw-bold mb-3">Solicita cotización o información</h4>
+          <form id="contactForm" action="#" method="POST">
+            <div class="mb-3">
+              <label for="nombre" class="form-label fw-semibold">Nombre completo *</label>
+              <input type="text" class="form-control rounded-pill" id="nombre" placeholder="Ej: Carlos Rodríguez" required>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label fw-semibold">Correo electrónico *</label>
+              <input type="email" class="form-control rounded-pill" id="email" placeholder="empresa@ejemplo.com" required>
+            </div>
+            <div class="mb-3">
+              <label for="telefono" class="form-label fw-semibold">Teléfono / WhatsApp</label>
+              <input type="tel" class="form-control rounded-pill" id="telefono" placeholder="+52 55 1234 5678">
+            </div>
+            <div class="mb-3">
+              <label for="mensaje" class="form-label fw-semibold">Mensaje o productos de interés *</label>
+              <textarea class="form-control" id="mensaje" rows="4" placeholder="Me interesa cotizar leche Alpura y café Nescafé para mi negocio..." required></textarea>
+            </div>
+            <div class="d-grid">
+              <button type="submit" class="btn btn-primary-custom text-white rounded-pill py-2 fw-semibold" id="btnEnviar"><i class="bi bi-send"></i> Enviar mensaje</button>
+            </div>
+            <div id="formFeedback" class="mt-3 text-center small fw-semibold"></div>
+          </form>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="h-100 d-flex flex-column justify-content-between">
+          <div class="bg-white p-4 rounded-4 shadow-sm mb-4">
+            <h5 class="fw-bold"><i class="bi bi-geo-alt-fill text-danger me-2"></i> Oficinas principales</h5>
+            <p class="mb-1">Av. Coruña 1450, Col. Industrial,<br>Ciudad de México, CDMX, C.P. 07720</p>
+            <hr>
+            <h5 class="fw-bold mt-3"><i class="bi bi-envelope-fill text-danger me-2"></i> Contacto directo</h5>
+            <p class="mb-1">ventas@taqdistribuciones.com</p>
+            <p><i class="bi bi-telephone-fill"></i> +52 (55) 8765 4321</p>
+            <hr>
+            <h5 class="fw-bold"><i class="bi bi-clock-history me-2"></i> Horario de atención</h5>
+            <p>Lunes a Viernes: 9:00 AM - 6:00 PM<br>Sábados: 10:00 AM - 2:00 PM</p>
+          </div>
+          <div class="bg-white p-3 rounded-4 text-center shadow-sm">
+            <p class="mb-0 fw-semibold">¿Eres minorista o mayorista? <a href="#" class="text-danger" data-bs-toggle="modal" data-bs-target="#modalCondiciones">Ver condiciones comerciales</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="pt-5 pb-4">
+  <div class="container">
+    <div class="row gy-4">
+      <div class="col-md-4">
+        <h4 class="fw-bold text-white">TAQ<span class="fw-light text-white-50"> Distribuciones</span></h4>
+        <p class="text-white-70 small">Distribuidores autorizados de Nestlé y Alpura, brindando soluciones comerciales con puntualidad y garantía.</p>
+        <div class="d-flex gap-3">
+          <a href="#" class="text-white-50"><i class="bi bi-facebook fs-5"></i></a>
+          <a href="#" class="text-white-50"><i class="bi bi-instagram fs-5"></i></a>
+          <a href="#" class="text-white-50"><i class="bi bi-linkedin fs-5"></i></a>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <h6 class="fw-semibold text-white">Enlaces rápidos</h6>
+        <ul class="list-unstyled">
+          <li><a href="#inicio" class="text-white-50 text-decoration-none small">Inicio</a></li>
+          <li><a href="#productos" class="text-white-50 text-decoration-none small">Productos</a></li>
+          <li><a href="#nosotros" class="text-white-50 text-decoration-none small">Nosotros</a></li>
+          <li><a href="#contacto" class="text-white-50 text-decoration-none small">Contacto</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <h6 class="fw-semibold text-white">Legales</h6>
+        <p class="small text-white-50">TAQ Comercializadora © 2025 <br>Todos los derechos reservados. <br>Las marcas Nestlé y Alpura son propiedad de sus respectivos dueños.</p>
+      </div>
+    </div>
+    <hr class="opacity-25">
+    <div class="text-center small text-white-50">Diseño profesional con Bootstrap 5 | TAQ - Soluciones en distribución</div>
+  </div>
+</footer>
+
+<!-- Botón flotante de WhatsApp (enlace directo) -->
+<a href="https://wa.me/525587654321?text=Hola%20TAQ%2C%20me%20interesa%20informaci%C3%B3n%20sobre%20productos%20Nestl%C3%A9%20y%20Alpura" class="btn-whatsapp-fixed" target="_blank" rel="noopener noreferrer">
+  <i class="bi bi-whatsapp"></i>
+</a>
+
+<!-- Modal condiciones comerciales (extra) -->
+<div class="modal fade" id="modalCondiciones" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content rounded-4">
+      <div class="modal-header border-0">
+        <h5 class="modal-title fw-bold">Condiciones para distribuidores</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>Ofrecemos precios por volumen, entregas programadas y facturación. Contáctanos para recibir tabla de precios exclusiva para mayoristas y descuentos por temporada.</p>
+        <p class="mb-0">*Ventas sujetas a disponibilidad de inventario, aplican términos y condiciones por zona geográfica.</p>
+      </div>
+      <div class="modal-footer border-0">
+        <button type="button" class="btn btn-secondary rounded-pill" data-bs-dismiss="modal">Cerrar</button>
+        <a href="#contacto" class="btn btn-danger rounded-pill" data-bs-dismiss="modal">Solicitar cotización</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap JS Bundle (para interactividad) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Script para feedback del formulario (simulación de envío) -->
+<script>
+  (function() {
+    const form = document.getElementById('contactForm');
+    const feedbackDiv = document.getElementById('formFeedback');
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      // Validación rápida simple
+      const nombre = document.getElementById('nombre').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const mensaje = document.getElementById('mensaje').value.trim();
+      if(!nombre || !email || !mensaje) {
+        feedbackDiv.innerHTML = '<span class="text-danger">❌ Por favor completa los campos obligatorios.</span>';
+        return;
+      }
+      if(!email.includes('@') || !email.includes('.')) {
+        feedbackDiv.innerHTML = '<span class="text-danger">❌ Ingresa un correo válido.</span>';
+        return;
+      }
+      // Simular envío exitoso
+      feedbackDiv.innerHTML = '<span class="text-success">✅ ¡Mensaje enviado! Nos pondremos en contacto contigo a la brevedad.</span>';
+      form.reset();
+      setTimeout(() => {
+        feedbackDiv.innerHTML = '';
+      }, 5000);
+    });
+  })();
+</script>
+</body>
+</html>
