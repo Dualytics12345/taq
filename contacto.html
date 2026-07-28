@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>Contacto & Cotizaciones | TAQ Distribución Nestlé & Alpura</title>
+  <!-- Bootstrap 5 CSS + Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <!-- Google Fonts: Inter -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <style>
+    * { font-family: 'Inter', sans-serif; }
+    body { background-color: #fefefe; scroll-behavior: smooth; }
+    .navbar { box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05); }
+    .hero-contacto {
+      background: linear-gradient(135deg, #0a2b3e 0%, #173e54 100%);
+      color: white;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    .brand-logo-text { font-weight: 800; letter-spacing: -0.5px; }
+    .btn-whatsapp-fixed {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      background-color: #25D366;
+      color: white;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 32px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+      transition: all 0.2s ease-in-out;
+      z-index: 1040;
+      text-decoration: none;
+    }
+    .btn-whatsapp-fixed:hover {
+      background-color: #20b859;
+      transform: scale(1.07);
+      color: white;
+    }
+    .contact-card {
+      background: white;
+      border-radius: 1.5rem;
+      box-shadow: 0 15px 35px -10px rgba(0,0,0,0.08);
+      border: 1px solid #edf2f7;
+    }
+    .info-box {
+      border-radius: 1.25rem;
+      background: #f8f9fc;
+      border: 1px solid #e2e8f0;
+      transition: all 0.2s;
+    }
+    .info-box:hover {
+      background: #ffffff;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    }
+    .accordion-button:not(.collapsed) {
+      background-color: rgba(10, 43, 62, 0.06);
+      color: #0a2b3e;
+      font-weight: 600;
+    }
+    .accordion-button:focus {
+      box-shadow: none;
+      border-color: rgba(10, 43, 62, 0.2);
+    }
+    footer { background-color: #0a2b3e; color: #e0e7ed; }
+    .btn-primary-custom {
+      background: #0a2b3e;
+      border: none;
+      border-radius: 40px;
+      padding: 12px 28px;
+      font-weight: 600;
+      transition: all 0.2s;
+    }
+    .btn-primary-custom:hover {
+      background: #173e54;
+      transform: translateY(-2px);
+    }
+    @media (max-width: 768px) {
+      .btn-whatsapp-fixed { width: 52px; height: 52px; font-size: 28px; bottom: 20px; right: 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navegación -->
+<nav class="navbar navbar-expand-lg bg-white py-3 sticky-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold fs-4" href="index.html">
+      <span class="brand-logo-text text-dark">TAQ</span> <span class="fw-normal text-secondary">| Distribuciones</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarMain">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-2">
+        <li class="nav-item"><a class="nav-link fw-semibold" href="index.html">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link fw-semibold" href="catalogo.html">Catálogo</a></li>
+        <li class="nav-item"><a class="nav-link fw-semibold" href="nosotros.html">Nosotros</a></li>
+        <li class="nav-item"><a class="nav-link fw-semibold active text-danger" href="contacto.html">Contacto</a></li>
+      </ul>
+      <a href="contacto.html" class="btn btn-danger rounded-pill ms-lg-3 px-4">Cotizar <i class="bi bi-arrow-right-short"></i></a>
+    </div>
+  </div>
+</nav>
+
+<!-- Header Contacto -->
+<section class="hero-contacto py-5">
+  <div class="container py-3 text-center">
+    <span class="badge bg-danger text-white rounded-pill px-3 py-2 mb-3 fw-semibold"><i class="bi bi-headset"></i> Atención Inmediata</span>
+    <h1 class="display-5 fw-bold mb-3">Contacto & Cotizaciones Comercial</h1>
+    <p class="lead opacity-75 mx-auto" style="max-width: 650px;">Solicita cotización de productos Nestlé y Alpura. Atención personalizada a mayoristas, abarreteros y cadenas de autoservicio.</p>
+  </div>
+</section>
+
+<!-- Formulario e Información -->
+<section class="py-5 bg-light">
+  <div class="container py-3">
+    <div class="row g-5">
+      
+      <!-- Formulario de contacto -->
+      <div class="col-lg-7">
+        <div class="contact-card p-4 p-md-5">
+          <div class="d-flex align-items-center gap-3 mb-4">
+            <div class="bg-danger bg-opacity-10 text-danger p-3 rounded-circle fs-3">
+              <i class="bi bi-envelope-paper-fill"></i>
+            </div>
+            <div>
+              <h4 class="fw-bold mb-0">Envíanos tu requerimiento</h4>
+              <p class="text-muted small mb-0">Respuesta garantizada en menos de 24 horas hábiles</p>
+            </div>
+          </div>
+
+          <form id="contactoFullForm" action="#" method="POST">
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label for="fullName" class="form-label fw-semibold">Nombre Completo *</label>
+                <input type="text" class="form-control rounded-pill" id="fullName" placeholder="Ej: Maria Elena Torres" required>
+              </div>
+              <div class="col-md-6">
+                <label for="companyName" class="form-label fw-semibold">Empresa / Negocio</label>
+                <input type="text" class="form-control rounded-pill" id="companyName" placeholder="Ej: Comercializadora El Sol">
+              </div>
+              <div class="col-md-6">
+                <label for="emailAddr" class="form-label fw-semibold">Correo Electrónico *</label>
+                <input type="email" class="form-control rounded-pill" id="emailAddr" placeholder="contacto@minegocio.com" required>
+              </div>
+              <div class="col-md-6">
+                <label for="phoneNum" class="form-label fw-semibold">Teléfono / WhatsApp *</label>
+                <input type="tel" class="form-control rounded-pill" id="phoneNum" placeholder="+52 55 9876 5432" required>
+              </div>
+              <div class="col-md-6">
+                <label for="clientType" class="form-label fw-semibold">Tipo de Cliente</label>
+                <select class="form-select rounded-pill" id="clientType">
+                  <option value="Mayorista">Mayorista / Distribuidor</option>
+                  <option value="Supermercado">Supermercado / Tienda de Abarrotes</option>
+                  <option value="FoodService">Hotel / Restaurante / Cafetería</option>
+                  <option value="Particular">Particular / Consumo Empresarial</option>
+                </select>
+              </div>
+              <div class="col-md-6">
+                <label for="brandInterest" class="form-label fw-semibold">Marca de Interés</label>
+                <select class="form-select rounded-pill" id="brandInterest">
+                  <option value="Ambas">Nestlé & Alpura (Ambas)</option>
+                  <option value="Nestle">Nestlé (Café, Lechera, Cereales)</option>
+                  <option value="Alpura">Alpura (Leches, Quesos, Crema)</option>
+                </select>
+              </div>
+              <div class="col-12">
+                <label for="messageText" class="form-label fw-semibold">Detalle del Pedido o Consulta *</label>
+                <textarea class="form-control rounded-4" id="messageText" rows="4" placeholder="Indica productos requeridos, cantidades aproximadas y destino de entrega..." required></textarea>
+              </div>
+            </div>
+
+            <div class="d-grid mt-4">
+              <button type="submit" class="btn btn-primary-custom text-white py-3 rounded-pill fw-semibold" id="btnSubmitFullForm">
+                <i class="bi bi-send-fill me-2"></i> Enviar Cotización
+              </button>
+            </div>
+            <div id="fullFormFeedback" class="mt-3 text-center small fw-semibold"></div>
+          </form>
+        </div>
+      </div>
+
+      <!-- Tarjetas informativas de contacto directo -->
+      <div class="col-lg-5 d-flex flex-column gap-3 justify-content-between">
+        
+        <div class="info-box p-4">
+          <div class="d-flex align-items-center gap-3">
+            <div class="bg-primary bg-opacity-10 text-primary p-3 rounded-circle fs-4">
+              <i class="bi bi-telephone-fill"></i>
+            </div>
+            <div>
+              <h6 class="fw-bold mb-1">Ventas & Atención Telefónica</h6>
+              <p class="mb-0 text-secondary">+52 771 380 5706</p>
+              <p class="mb-0 text-secondary">+52 771 677 4014</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-box p-4">
+          <div class="d-flex align-items-center gap-3">
+            <div class="bg-success bg-opacity-10 text-success p-3 rounded-circle fs-4">
+              <i class="bi bi-whatsapp"></i>
+            </div>
+            <div>
+              <h6 class="fw-bold mb-1">WhatsApp Comercial Directo</h6>
+              <p class="mb-1 text-secondary">Respuesta inmediata para pedidos urgentes (771 380 5706)</p>
+              <a href="https://wa.me/527713805706?text=Hola%20TAQ%2C%20quisiera%20cotizar%20productos" target="_blank" class="btn btn-sm btn-success rounded-pill px-3">Iniciar Chat <i class="bi bi-box-arrow-up-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-box p-4">
+          <div class="d-flex align-items-center gap-3">
+            <div class="bg-danger bg-opacity-10 text-danger p-3 rounded-circle fs-4">
+              <i class="bi bi-geo-alt-fill"></i>
+            </div>
+            <div>
+              <h6 class="fw-bold mb-1">Centro de Distribución CDMX</h6>
+              <p class="mb-0 text-secondary">Av. Coruña 1450, Col. Industrial</p>
+              <p class="mb-0 text-secondary">Gustavo A. Madero, CDMX, C.P. 07720</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-box p-4">
+          <div class="d-flex align-items-center gap-3">
+            <div class="bg-warning bg-opacity-10 text-warning text-dark p-3 rounded-circle fs-4">
+              <i class="bi bi-clock-fill"></i>
+            </div>
+            <div>
+              <h6 class="fw-bold mb-1">Horario Logístico</h6>
+              <p class="mb-0 text-secondary"><strong>Lunes a Viernes:</strong> 8:30 AM - 6:30 PM</p>
+              <p class="mb-0 text-secondary"><strong>Sábados:</strong> 9:00 AM - 2:00 PM</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Preguntas Frecuentes (FAQ) -->
+<section class="py-5 bg-white border-top">
+  <div class="container py-3">
+    <div class="text-center mb-5">
+      <span class="badge bg-danger bg-opacity-10 text-danger rounded-pill px-3 py-2 mb-2 fw-semibold">Resolvemos tus dudas</span>
+      <h2 class="fw-bold">Preguntas Frecuentes de Nuestros Clientes</h2>
+      <p class="text-muted">Información clave sobre condiciones comerciales y entregas</p>
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="col-lg-9">
+        <div class="accordion accordion-flush shadow-sm rounded-4 border overflow-hidden" id="faqAccordion">
+          
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                ¿Existe un pedido mínimo para entregas a domicilio?
+              </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+              <div class="accordion-body text-secondary">
+                Sí. Para entregas directas en tu establecimiento manejamos un pedido mínimo de 5 cajas cerradas (pueden ser combinadas entre productos Nestlé y Alpura). Para pedidos menores, contamos con la opción de recolección en nuestras instalaciones.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                ¿Cuál es la cobertura geográfica de entrega?
+              </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+              <div class="accordion-body text-secondary">
+                Realizamos entregas con flota propia en toda la Zona Metropolitana del Valle de México (CDMX y Estado de México). Para el resto de la República Mexicana enviamos mediante consolidación de carga en tarima.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingThree">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                ¿Se emite factura fiscal por cada compra?
+              </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+              <div class="accordion-body text-secondary">
+                Absolutamente. Todos nuestros precios incluyen IVA (o desglose correspondiente según la norma fiscal) y emitimos factura CFDI 4.0 a tu RFC con el uso indicado.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingFour">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                ¿Qué formas de pago aceptan?
+              </button>
+            </h2>
+            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+              <div class="accordion-body text-secondary">
+                Aceptamos transferencia electrónica SPEI, depósito bancario y pago contra entrega (para clientes registrados con historial de compra).
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingFive">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                ¿Cómo garantizan la frescura de los productos fríos Alpura?
+              </button>
+            </h2>
+            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#faqAccordion">
+              <div class="accordion-body text-secondary">
+                Contamos con cámaras frigoríficas certificadas y vehículos de reparto adaptados con refrigeración activa para asegurar que quesos, yogurts y cremas no rompan la cadena de frío durante el trayecto.
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="pt-5 pb-4">
+  <div class="container">
+    <div class="row gy-4">
+      <div class="col-md-4">
+        <h4 class="fw-bold text-white">TAQ<span class="fw-light text-white-50"> Distribuciones</span></h4>
+        <p class="text-white-70 small">Distribuidores autorizados de Nestlé y Alpura, brindando soluciones comerciales con puntualidad y garantía.</p>
+        <div class="d-flex gap-3">
+          <a href="#" class="text-white-50"><i class="bi bi-facebook fs-5"></i></a>
+          <a href="#" class="text-white-50"><i class="bi bi-instagram fs-5"></i></a>
+          <a href="#" class="text-white-50"><i class="bi bi-linkedin fs-5"></i></a>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <h6 class="fw-semibold text-white">Enlaces rápidos</h6>
+        <ul class="list-unstyled">
+          <li><a href="index.html" class="text-white-50 text-decoration-none small">Inicio</a></li>
+          <li><a href="catalogo.html" class="text-white-50 text-decoration-none small">Catálogo</a></li>
+          <li><a href="nosotros.html" class="text-white-50 text-decoration-none small">Nosotros</a></li>
+          <li><a href="contacto.html" class="text-white-50 text-decoration-none small">Contacto</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <h6 class="fw-semibold text-white">Legales</h6>
+        <p class="small text-white-50">TAQ Comercializadora © 2025 <br>Todos los derechos reservados. <br>Las marcas Nestlé y Alpura son propiedad de sus respectivos dueños.</p>
+      </div>
+    </div>
+    <hr class="opacity-25">
+    <div class="text-center small text-white-50">Diseño profesional con Bootstrap 5 | TAQ - Soluciones en distribución</div>
+  </div>
+</footer>
+
+<!-- Botón flotante de WhatsApp -->
+<a href="https://wa.me/527713805706?text=Hola%20TAQ%2C%20quisiera%20m%C3%A1s%20informaci%C3%B3n" class="btn-whatsapp-fixed" target="_blank" rel="noopener noreferrer">
+  <i class="bi bi-whatsapp"></i>
+</a>
+
+<!-- Bootstrap JS + Form handling -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  (function() {
+    const form = document.getElementById('contactoFullForm');
+    const feedback = document.getElementById('fullFormFeedback');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const name = document.getElementById('fullName').value.trim();
+      const email = document.getElementById('emailAddr').value.trim();
+      const phone = document.getElementById('phoneNum').value.trim();
+      const message = document.getElementById('messageText').value.trim();
+
+      if (!name || !email || !phone || !message) {
+        feedback.innerHTML = '<div class="alert alert-danger py-2 rounded-pill">⚠️ Por favor completa los campos requeridos con *.</div>';
+        return;
+      }
+
+      if (!email.includes('@') || !email.includes('.')) {
+        feedback.innerHTML = '<div class="alert alert-warning py-2 rounded-pill">⚠️ Ingresa un correo electrónico válido.</div>';
+        return;
+      }
+
+      feedback.innerHTML = '<div class="alert alert-success py-2 rounded-pill">✅ ¡Cotización enviada con éxito! Un ejecutivo comercial se pondrá en contacto contigo en breve.</div>';
+      form.reset();
+
+      setTimeout(() => {
+        feedback.innerHTML = '';
+      }, 6000);
+    });
+  })();
+</script>
+</body>
+</html>
