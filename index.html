@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
@@ -9,28 +10,35 @@
   <!-- Bootstrap Icons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <!-- Google Fonts: tipografía moderna y profesional -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap"
+    rel="stylesheet">
   <style>
     * {
       font-family: 'Inter', sans-serif;
     }
+
     body {
       background-color: #fefefe;
       scroll-behavior: smooth;
     }
+
     /* Efectos y sombras sutiles */
     .navbar {
       box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.02);
       transition: all 0.2s ease;
     }
+
     .hero-section {
       background: linear-gradient(135deg, #f8f9fc 0%, #eef2f7 100%);
-      border-bottom: 1px solid rgba(0,0,0,0.05);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
     }
+
     .brand-logo-text {
       font-weight: 800;
       letter-spacing: -0.5px;
     }
+
     .btn-whatsapp-fixed {
       position: fixed;
       bottom: 28px;
@@ -44,28 +52,32 @@
       align-items: center;
       justify-content: center;
       font-size: 32px;
-      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
       transition: all 0.2s ease-in-out;
       z-index: 1040;
       text-decoration: none;
       border: none;
     }
+
     .btn-whatsapp-fixed:hover {
       background-color: #20b859;
       transform: scale(1.07);
       color: white;
-      box-shadow: 0 15px 25px rgba(0,0,0,0.25);
+      box-shadow: 0 15px 25px rgba(0, 0, 0, 0.25);
     }
+
     .card-prod {
       border: none;
       border-radius: 1.5rem;
       transition: transform 0.2s, box-shadow 0.2s;
-      box-shadow: 0 12px 28px -8px rgba(0,0,0,0.08);
+      box-shadow: 0 12px 28px -8px rgba(0, 0, 0, 0.08);
     }
+
     .card-prod:hover {
       transform: translateY(-6px);
-      box-shadow: 0 20px 32px -12px rgba(0,0,0,0.12);
+      box-shadow: 0 20px 32px -12px rgba(0, 0, 0, 0.12);
     }
+
     .card-prod img {
       border-top-left-radius: 1.5rem;
       border-top-right-radius: 1.5rem;
@@ -74,12 +86,14 @@
       padding: 12px;
       background-color: #f8f9fa;
     }
+
     .section-title {
       font-weight: 700;
       position: relative;
       display: inline-block;
       margin-bottom: 1rem;
     }
+
     .section-title:after {
       content: '';
       position: absolute;
@@ -90,15 +104,18 @@
       background: #dc3545;
       border-radius: 3px;
     }
+
     .contact-form {
       background: white;
       border-radius: 2rem;
-      box-shadow: 0 20px 35px -12px rgba(0,0,0,0.1);
+      box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.1);
     }
+
     footer {
       background-color: #0a2b3e;
       color: #e0e7ed;
     }
+
     .brand-color-nestle {
       color: #C22B2B;
     }
@@ -108,6 +125,7 @@
       padding: 8px 24px;
       font-weight: 500;
     }
+
     .btn-primary-custom {
       background: #0a2b3e;
       border: none;
@@ -116,10 +134,12 @@
       font-weight: 600;
       transition: all 0.2s;
     }
+
     .btn-primary-custom:hover {
       background: #173e54;
       transform: translateY(-2px);
     }
+
     @media (max-width: 768px) {
       .btn-whatsapp-fixed {
         width: 52px;
@@ -128,405 +148,474 @@
         bottom: 20px;
         right: 20px;
       }
+
       .hero-section h1 {
         font-size: 2rem;
       }
     }
   </style>
 </head>
+
 <body>
 
-<!-- Barra de navegación profesional -->
-<nav class="navbar navbar-expand-lg bg-white py-3 sticky-top">
-  <div class="container">
-    <a class="navbar-brand fw-bold fs-4" href="index.html">
-      <span class="brand-logo-text">TAQ</span> <span class="fw-normal text-secondary">| Distribuciones</span>
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarMain">
-      <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-2">
-        <li class="nav-item"><a class="nav-link fw-semibold active text-danger" href="index.html">Inicio</a></li>
-        <li class="nav-item"><a class="nav-link fw-semibold" href="catalogo.html">Catálogo</a></li>
-        <li class="nav-item"><a class="nav-link fw-semibold" href="nosotros.html">Nosotros</a></li>
-        <li class="nav-item"><a class="nav-link fw-semibold" href="contacto.html">Contacto</a></li>
-      </ul>
-      <a href="contacto.html" class="btn btn-danger rounded-pill ms-lg-3 px-4">Cotizar <i class="bi bi-arrow-right-short"></i></a>
-    </div>
-  </div>
-</nav>
-
-<!-- Hero / Inicio -->
-<section id="inicio" class="hero-section py-5">
-  <div class="container py-md-4">
-    <div class="row align-items-center g-5">
-      <div class="col-lg-6">
-        <span class="badge bg-danger bg-opacity-10 text-danger rounded-pill px-3 py-2 mb-3 fw-semibold"><i class="bi bi-truck"></i> Distribución mayorista y minorista</span>
-        <h1 class="display-4 fw-bold mb-3">Líderes en Distribución <span class="brand-color-nestle">Nestlé</span></h1>
-        <p class="lead text-secondary mb-4">Somos TAQ, tu socio comercial de confianza. Ofrecemos productos de alta calidad con cobertura nacional, precios competitivos y entregas garantizadas.</p>
-        <div class="d-flex flex-wrap gap-3">
-          <a href="catalogo.html" class="btn btn-primary-custom text-white px-4 py-2 rounded-pill">Ver catálogo <i class="bi bi-box-seam"></i></a>
-          <a href="contacto.html" class="btn btn-outline-secondary rounded-pill px-4 py-2">Solicitar información</a>
-        </div>
-        <div class="mt-4 d-flex gap-4 align-items-center">
-          <div><i class="bi bi-patch-check-fill text-success me-1"></i> <span class="fw-semibold">+200 clientes</span></div>
-          <div><i class="bi bi-geo-alt-fill text-primary me-1"></i> <span class="fw-semibold">Envíos a todo el país</span></div>
-        </div>
-      </div>
-      <div class="col-lg-6 text-center">
-        <img src="logooo.jpeg" alt="Distribución TAQ" class="img-fluid rounded-4 shadow-lg" style="max-height: 380px; width: auto; object-fit: cover;">
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Sección de productos: Nestlé -->
-<section id="productos" class="py-5 bg-light">
-  <div class="container py-4">
-    <div class="text-center mb-5">
-      <h2 class="section-title text-center" style="display: inline-block;">Productos destacados</h2>
-      <p class="text-muted mt-3">Las líneas oficiales Nestlé que distribuimos con excelente servicio</p>
-    </div>
-
-    <!-- Fila 1 de productos Nestlé -->
-    <div class="mb-4">
-      <div class="d-flex align-items-center gap-2 mb-4">
-        <i class="bi bi-cup-straw fs-2 text-danger"></i>
-        <h3 class="fw-semibold mb-0">Nestlé <span class="fs-6 text-muted">| Productos destacados del catálogo</span></h3>
-      </div>
-      <div class="row g-4">
-        <div class="col-md-6 col-lg-3">
-          <div class="card card-prod h-100">
-            <img src="img/clasico15.png" class="card-img-top" alt="NESCAFÉ Clásico 1.5kg">
-            <div class="card-body d-flex flex-column justify-content-between">
-              <div>
-                <span class="badge bg-danger bg-opacity-10 text-danger rounded-pill mb-2">Nestlé</span>
-                <h5 class="card-title fw-bold fs-6">NESCAFÉ® CLÁSICO® 1.5kg</h5>
-                <p class="card-text text-secondary small">Café 100% soluble. Rinde 750 tazas por lata, ideal para restaurantes y mayoristas.</p>
-              </div>
-              <div class="pt-3 border-top mt-2 d-flex justify-content-between align-items-center">
-                <span class="small text-muted">Clave: 12392888</span>
-                <a href="catalogo.html" class="btn btn-sm btn-outline-danger rounded-pill">Cotizar</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-3">
-          <div class="card card-prod h-100">
-            <img src="img/lechera45.png" class="card-img-top" alt="LA LECHERA Untable 4.5kg">
-            <div class="card-body d-flex flex-column justify-content-between">
-              <div>
-                <span class="badge bg-danger bg-opacity-10 text-danger rounded-pill mb-2">Nestlé</span>
-                <h5 class="card-title fw-bold fs-6">LA LECHERA® Untable 4.5kg</h5>
-                <p class="card-text text-secondary small">Leche condensada untable 100% de vaca. Alta versatilidad en repostería.</p>
-              </div>
-              <div class="pt-3 border-top mt-2 d-flex justify-content-between align-items-center">
-                <span class="small text-muted">Clave: 12383020</span>
-                <a href="catalogo.html" class="btn btn-sm btn-outline-danger rounded-pill">Cotizar</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-3">
-          <div class="card card-prod h-100">
-            <img src="img/maggi800.png" class="card-img-top" alt="Jugo MAGGI 800ml">
-            <div class="card-body d-flex flex-column justify-content-between">
-              <div>
-                <span class="badge bg-danger bg-opacity-10 text-danger rounded-pill mb-2">Nestlé</span>
-                <h5 class="card-title fw-bold fs-6">Jugo MAGGI® Sazonador 800ml</h5>
-                <p class="card-text text-secondary small">Sazonador líquido concentrado para carnes, sopas y botanas. Presentación food service.</p>
-              </div>
-              <div class="pt-3 border-top mt-2 d-flex justify-content-between align-items-center">
-                <span class="small text-muted">Clave: 12482812</span>
-                <a href="catalogo.html" class="btn btn-sm btn-outline-danger rounded-pill">Cotizar</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-3">
-          <div class="card card-prod h-100">
-            <img src="img/chocoabue216.jpeg" class="card-img-top" alt="CHOCOLATE ABUELITA 2.16kg">
-            <div class="card-body d-flex flex-column justify-content-between">
-              <div>
-                <span class="badge bg-danger bg-opacity-10 text-danger rounded-pill mb-2">Nestlé</span>
-                <h5 class="card-title fw-bold fs-6">CHOCOLATE ABUELITA® 2.16kg</h5>
-                <p class="card-text text-secondary small">Chocolate para mesa tradicional con auténtico sabor a canela. Caja con 6 unidades.</p>
-              </div>
-              <div class="pt-3 border-top mt-2 d-flex justify-content-between align-items-center">
-                <span class="small text-muted">Clave: 12340733</span>
-                <a href="catalogo.html" class="btn btn-sm btn-outline-danger rounded-pill">Cotizar</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Fila 2 de productos Nestlé -->
-    <div class="mb-4">
-      <div class="row g-4">
-        <div class="col-md-6 col-lg-3">
-          <div class="card card-prod h-100">
-            <img src="img/inglesa19.webp" class="card-img-top" alt="Salsa Inglesa Crosse & Blackwell 1.9L">
-            <div class="card-body d-flex flex-column justify-content-between">
-              <div>
-                <span class="badge bg-danger bg-opacity-10 text-danger rounded-pill mb-2">Nestlé</span>
-                <h5 class="card-title fw-bold fs-6">CROSSE & BLACKWELL® 1.9L</h5>
-                <p class="card-text text-secondary small">Salsa tipo inglesa formato 1.9 litros para sazonar carnes, mariscos y botanas.</p>
-              </div>
-              <div class="pt-3 border-top mt-2 d-flex justify-content-between align-items-center">
-                <span class="small text-muted">Clave: 12482715</span>
-                <a href="catalogo.html" class="btn btn-sm btn-outline-danger rounded-pill">Cotizar</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-3">
-          <div class="card card-prod h-100">
-            <img src="img/carlos25.webp" class="card-img-top" alt="CARLOS V Chocolate 2.5kg">
-            <div class="card-body d-flex flex-column justify-content-between">
-              <div>
-                <span class="badge bg-danger bg-opacity-10 text-danger rounded-pill mb-2">Nestlé</span>
-                <h5 class="card-title fw-bold fs-6">CARLOS V® Chocolate 2.5kg</h5>
-                <p class="card-text text-secondary small">El Rey de los Chocolates en bloque de cobertura para repostería y chocolatería.</p>
-              </div>
-              <div class="pt-3 border-top mt-2 d-flex justify-content-between align-items-center">
-                <span class="small text-muted">Clave: 12280329</span>
-                <a href="catalogo.html" class="btn btn-sm btn-outline-danger rounded-pill">Cotizar</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-3">
-          <div class="card card-prod h-100">
-            <img src="img/cremacafe225.png" class="card-img-top" alt="COFFEE-MATE Crema 22.5kg">
-            <div class="card-body d-flex flex-column justify-content-between">
-              <div>
-                <span class="badge bg-danger bg-opacity-10 text-danger rounded-pill mb-2">Nestlé</span>
-                <h5 class="card-title fw-bold fs-6">COFFEE-MATE® Crema 22.5kg</h5>
-                <p class="card-text text-secondary small">Sustituto de crema en polvo para máxima cremosidad en bebidas y helados.</p>
-              </div>
-              <div class="pt-3 border-top mt-2 d-flex justify-content-between align-items-center">
-                <span class="small text-muted">Clave: 12577070</span>
-                <a href="catalogo.html" class="btn btn-sm btn-outline-danger rounded-pill">Cotizar</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-3">
-          <div class="card card-prod h-100">
-            <img src="img/lechera3leches1l.png" class="card-img-top" alt="LA LECHERA Tres Leches 1kg">
-            <div class="card-body d-flex flex-column justify-content-between">
-              <div>
-                <span class="badge bg-danger bg-opacity-10 text-danger rounded-pill mb-2">Nestlé</span>
-                <h5 class="card-title fw-bold fs-6">LA LECHERA® Tres Leches 1kg</h5>
-                <p class="card-text text-secondary small">Mezcla única con el equilibrio y sabor original para pasteles tres leches.</p>
-              </div>
-              <div class="pt-3 border-top mt-2 d-flex justify-content-between align-items-center">
-                <span class="small text-muted">Clave: 12308903</span>
-                <a href="catalogo.html" class="btn btn-sm btn-outline-danger rounded-pill">Cotizar</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="text-center mt-5">
-      <a href="catalogo.html" class="btn btn-outline-danger rounded-pill px-5 py-2 fw-semibold">Ver catálogo completo <i class="bi bi-arrow-right-circle"></i></a>
-    </div>
-  </div>
-</section>
-
-<!-- Nosotros: breve misión / valores -->
-<section id="nosotros" class="py-5">
-  <div class="container py-4">
-    <div class="row align-items-center">
-      <div class="col-lg-6 mb-4 mb-lg-0">
-        <span class="badge bg-dark bg-opacity-10 text-dark rounded-pill mb-3">Quiénes somos</span>
-        <h2 class="fw-bold mb-3">Comprometidos con el abasto y la calidad</h2>
-        <p class="text-secondary">TAQ nace como una empresa comercializadora con el objetivo de ofrecer a negocios y mayoristas los productos más demandados de Nestlé. Contamos con cadena de suministro eficiente, precios justos y atención personalizada.</p>
-        <div class="row mt-4">
-          <div class="col-md-6 mb-3">
-            <div class="d-flex gap-2">
-              <i class="bi bi-check-circle-fill text-danger fs-4"></i>
-              <div><strong>+10 años de experiencia</strong><br><small class="text-secondary">Respaldo en distribución B2B</small></div>
-            </div>
-          </div>
-          <div class="col-md-6 mb-3">
-            <div class="d-flex gap-2">
-              <i class="bi bi-shield-check text-danger fs-4"></i>
-              <div><strong>Garantía de frescura</strong><br><small class="text-secondary">Productos directo de fábrica</small></div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-6">
-        <div class="bg-white p-4 rounded-4 shadow-sm">
-          <div class="d-flex gap-3 align-items-center border-bottom pb-3 mb-3">
-            <i class="bi bi-trophy-fill fs-1 text-warning"></i>
-            <div><h5 class="mb-0 fw-bold">Distribuidores autorizados</h5><span class="text-muted small">Certificados por Nestlé</span></div>
-          </div>
-          <p>Nuestro compromiso es entregar puntualmente cada pedido, brindar asesoría comercial y garantizar la mejor experiencia a nuestros clientes. Somos el puente confiable entre las grandes marcas y tu negocio.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Formulario de contacto + Mapa / Detalles -->
-<section id="contacto" class="py-5 bg-light">
-  <div class="container">
-    <div class="text-center mb-5">
-      <h2 class="section-title text-center" style="display: inline-block;">Hablemos de negocios</h2>
-      <p class="text-muted mt-3">Cuéntanos tus requerimientos, te asesoramos sin compromiso</p>
-    </div>
-    <div class="row g-5">
-      <div class="col-lg-6">
-        <div class="contact-form p-4 p-md-5">
-          <h4 class="fw-bold mb-3">Solicita cotización o información</h4>
-          <form id="contactForm" action="#" method="POST">
-            <div class="mb-3">
-              <label for="nombre" class="form-label fw-semibold">Nombre completo *</label>
-              <input type="text" class="form-control rounded-pill" id="nombre" placeholder="Ej: Carlos Rodríguez" required>
-            </div>
-            <div class="mb-3">
-              <label for="email" class="form-label fw-semibold">Correo electrónico *</label>
-              <input type="email" class="form-control rounded-pill" id="email" placeholder="empresa@ejemplo.com" required>
-            </div>
-            <div class="mb-3">
-              <label for="telefono" class="form-label fw-semibold">Teléfono / WhatsApp</label>
-              <input type="tel" class="form-control rounded-pill" id="telefono" placeholder="+52 771 677 4014">
-            </div>
-            <div class="mb-3">
-              <label for="mensaje" class="form-label fw-semibold">Mensaje o productos de interés *</label>
-              <textarea class="form-control" id="mensaje" rows="4" placeholder="Me interesa cotizar café Nescafé y productos Nestlé para mi negocio..." required></textarea>
-            </div>
-            <div class="d-grid">
-              <button type="submit" class="btn btn-primary-custom text-white rounded-pill py-2 fw-semibold" id="btnEnviar"><i class="bi bi-whatsapp me-1"></i> Enviar por WhatsApp</button>
-            </div>
-            <div id="formFeedback" class="mt-3 text-center small fw-semibold"></div>
-          </form>
-        </div>
-      </div>
-      <div class="col-lg-6">
-        <div class="h-100 d-flex flex-column justify-content-between">
-          <div class="bg-white p-4 rounded-4 shadow-sm mb-4">
-            <h5 class="fw-bold"><i class="bi bi-geo-alt-fill text-danger me-2"></i> Oficinas principales</h5>
-            <p class="mb-1">Av. Coruña 1450, Col. Industrial,<br>Ciudad de México, CDMX, C.P. 07720</p>
-            <hr>
-            <h5 class="fw-bold mt-3"><i class="bi bi-envelope-fill text-danger me-2"></i> Contacto directo</h5>
-            <p class="mb-1">ventas@taqdistribuciones.com</p>
-            <p><i class="bi bi-telephone-fill"></i> +52 771 677 4014</p>
-            <hr>
-            <h5 class="fw-bold"><i class="bi bi-clock-history me-2"></i> Horario de atención</h5>
-            <p>Lunes a Viernes: 9:00 AM - 6:00 PM<br>Sábados: 10:00 AM - 2:00 PM</p>
-          </div>
-          <div class="bg-white p-3 rounded-4 text-center shadow-sm">
-            <p class="mb-0 fw-semibold">¿Eres minorista o mayorista? <a href="#" class="text-danger" data-bs-toggle="modal" data-bs-target="#modalCondiciones">Ver condiciones comerciales</a></p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Footer -->
-<footer class="pt-5 pb-4">
-  <div class="container">
-    <div class="row gy-4">
-      <div class="col-md-4">
-        <h4 class="fw-bold text-white">TAQ<span class="fw-light text-white-50"> Distribuciones</span></h4>
-        <p class="text-white-70 small">Distribuidores autorizados de Nestlé, brindando soluciones comerciales con puntualidad y garantía.</p>
-        <div class="d-flex gap-3">
-          <a href="#" class="text-white-50"><i class="bi bi-facebook fs-5"></i></a>
-          <a href="#" class="text-white-50"><i class="bi bi-instagram fs-5"></i></a>
-          <a href="#" class="text-white-50"><i class="bi bi-linkedin fs-5"></i></a>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <h6 class="fw-semibold text-white">Enlaces rápidos</h6>
-        <ul class="list-unstyled">
-          <li><a href="index.html" class="text-white-50 text-decoration-none small">Inicio</a></li>
-          <li><a href="catalogo.html" class="text-white-50 text-decoration-none small">Catálogo</a></li>
-          <li><a href="nosotros.html" class="text-white-50 text-decoration-none small">Nosotros</a></li>
-          <li><a href="contacto.html" class="text-white-50 text-decoration-none small">Contacto</a></li>
+  <!-- Barra de navegación profesional -->
+  <nav class="navbar navbar-expand-lg bg-white py-3 sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold fs-4" href="index.html">
+        <span class="brand-logo-text">TAQ</span> <span class="fw-normal text-secondary">| Distribuciones</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain"
+        aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarMain">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-2">
+          <li class="nav-item"><a class="nav-link fw-semibold active text-danger" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link fw-semibold" href="catalogo.html">Catálogo</a></li>
+          <li class="nav-item"><a class="nav-link fw-semibold" href="nosotros.html">Nosotros</a></li>
+          <li class="nav-item"><a class="nav-link fw-semibold" href="contacto.html">Contacto</a></li>
         </ul>
-      </div>
-      <div class="col-md-4">
-        <h6 class="fw-semibold text-white">Legales</h6>
-        <p class="small text-white-50">TAQ Comercializadora © 2025 <br>Todos los derechos reservados. <br>La marca Nestlé es propiedad de sus respectivos dueños.</p>
+        <a href="contacto.html" class="btn btn-danger rounded-pill ms-lg-3 px-4">Cotizar <i
+            class="bi bi-arrow-right-short"></i></a>
       </div>
     </div>
-    <hr class="opacity-25">
-    <div class="text-center small text-white-50">Diseño profesional con Bootstrap 5 | TAQ - Soluciones en distribución</div>
-  </div>
-</footer>
+  </nav>
 
-<!-- Botón flotante de WhatsApp (enlace directo) -->
-<a href="https://wa.me/527716774014?text=Hola%20TAQ%2C%20me%20interesa%20informaci%C3%B3n%20sobre%20productos%20Nestl%C3%A9" class="btn-whatsapp-fixed" target="_blank" rel="noopener noreferrer">
-  <i class="bi bi-whatsapp"></i>
-</a>
+  <!-- Hero / Inicio -->
+  <section id="inicio" class="hero-section py-5">
+    <div class="container py-md-4">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <span class="badge bg-danger bg-opacity-10 text-danger rounded-pill px-3 py-2 mb-3 fw-semibold"><i
+              class="bi bi-truck"></i> Distribución mayorista y minorista</span>
+          <h1 class="display-4 fw-bold mb-3">Líderes en Distribución <span class="brand-color-nestle">Nestlé</span></h1>
+          <p class="lead text-secondary mb-4">Somos TAQ, tu socio comercial de confianza. Ofrecemos productos de alta
+            calidad, precios competitivos y entregas garantizadas.</p>
+          <div class="d-flex flex-wrap gap-3">
+            <a href="catalogo.html" class="btn btn-primary-custom text-white px-4 py-2 rounded-pill">Ver catálogo <i
+                class="bi bi-box-seam"></i></a>
+            <a href="contacto.html" class="btn btn-outline-secondary rounded-pill px-4 py-2">Solicitar información</a>
+          </div>
+          <div class="mt-4 d-flex gap-4 align-items-center">
+            <div><i class="bi bi-shield-check text-success me-1"></i> <span class="fw-semibold">Productos 100%
+                Originales</span></div>
+            <div><i class="bi bi-truck text-danger me-1"></i> <span class="fw-semibold">Atención y Entregas
+                Puntuales</span></div>
+          </div>
+        </div>
+        <div class="col-lg-6 text-center">
+          <img src="logooo.jpeg" alt="Distribución TAQ" class="img-fluid rounded-4 shadow-lg"
+            style="max-height: 380px; width: auto; object-fit: cover;">
+        </div>
+      </div>
+    </div>
+  </section>
 
-<!-- Modal condiciones comerciales (extra) -->
-<div class="modal fade" id="modalCondiciones" tabindex="-1" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content rounded-4">
-      <div class="modal-header border-0">
-        <h5 class="modal-title fw-bold">Condiciones para distribuidores</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+  <!-- Sección de productos: Nestlé -->
+  <section id="productos" class="py-5 bg-light">
+    <div class="container py-4">
+      <div class="text-center mb-5">
+        <h2 class="section-title text-center" style="display: inline-block;">Productos destacados</h2>
+        <p class="text-muted mt-3">Las líneas oficiales Nestlé que distribuimos con excelente servicio</p>
       </div>
-      <div class="modal-body">
-        <p>Ofrecemos precios por volumen, entregas programadas y facturación. Contáctanos para recibir tabla de precios exclusiva para mayoristas y descuentos por temporada.</p>
-        <p class="mb-0">*Ventas sujetas a disponibilidad de inventario, aplican términos y condiciones por zona geográfica.</p>
+
+      <!-- Sección de productos Nestlé Destacados -->
+      <div class="mb-4">
+        <div class="d-flex align-items-center gap-2 mb-4">
+          <i class="bi bi-cup-straw fs-2 text-danger"></i>
+          <h3 class="fw-semibold mb-0">Nestlé <span class="fs-6 text-muted">| Productos destacados del catálogo</span>
+          </h3>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-3">
+            <div class="card card-prod h-100">
+              <img src="img/clasico15.png" class="card-img-top" alt="NESCAFÉ Clásico 1.5kg">
+              <div class="card-body d-flex flex-column justify-content-between">
+                <div>
+                  <span class="badge bg-danger bg-opacity-10 text-danger rounded-pill mb-2">Nestlé</span>
+                  <h5 class="card-title fw-bold fs-6">NESCAFÉ® CLÁSICO® 1.5kg</h5>
+                  <p class="card-text text-secondary small">Café 100% soluble. Rinde 750 tazas por lata, ideal para
+                    restaurantes y mayoristas.</p>
+                </div>
+                <div class="pt-3 border-top mt-2 d-flex justify-content-between align-items-center">
+                  <span class="small text-muted">Clave: 12392888</span>
+                  <a href="catalogo.html" class="btn btn-sm btn-outline-danger rounded-pill">Cotizar</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="card card-prod h-100">
+              <img src="img/lechera45.png" class="card-img-top" alt="LA LECHERA Cubeta 25.5kg">
+              <div class="card-body d-flex flex-column justify-content-between">
+                <div>
+                  <span class="badge bg-danger bg-opacity-10 text-danger rounded-pill mb-2">Nestlé</span>
+                  <h5 class="card-title fw-bold fs-6">LA LECHERA® Cubeta 25.5kg</h5>
+                  <p class="card-text text-secondary small">Leche condensada 100% de vaca en presentación institucional
+                    de 25.5kg para alta producción.</p>
+                </div>
+                <div class="pt-3 border-top mt-2 d-flex justify-content-between align-items-center">
+                  <span class="small text-muted">Clave: 12383025</span>
+                  <a href="catalogo.html" class="btn btn-sm btn-outline-danger rounded-pill">Cotizar</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="card card-prod h-100">
+              <img src="img/evaporada1kg.webp" class="card-img-top" alt="CARNATION CLAVEL Leche Evaporada 1kg">
+              <div class="card-body d-flex flex-column justify-content-between">
+                <div>
+                  <span class="badge bg-danger bg-opacity-10 text-danger rounded-pill mb-2">Nestlé</span>
+                  <h5 class="card-title fw-bold fs-6">CARNATION® CLAVEL® 1kg</h5>
+                  <p class="card-text text-secondary small">Leche evaporada cremosa para uso gastronómico, bebidas y
+                    repostería HORECA.</p>
+                </div>
+                <div class="pt-3 border-top mt-2 d-flex justify-content-between align-items-center">
+                  <span class="small text-muted">Clave: 12140454</span>
+                  <a href="catalogo.html" class="btn btn-sm btn-outline-danger rounded-pill">Cotizar</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="card card-prod h-100">
+              <img src="img/mediacrema1.webp" class="card-img-top" alt="NESTLÉ Media Crema 1L">
+              <div class="card-body d-flex flex-column justify-content-between">
+                <div>
+                  <span class="badge bg-danger bg-opacity-10 text-danger rounded-pill mb-2">Nestlé</span>
+                  <h5 class="card-title fw-bold fs-6">NESTLÉ® Media Crema 1L</h5>
+                  <p class="card-text text-secondary small">Doble consistencia ideal para platillos salados, salsas,
+                    cremas y postres.</p>
+                </div>
+                <div class="pt-3 border-top mt-2 d-flex justify-content-between align-items-center">
+                  <span class="small text-muted">Clave: 12393464</span>
+                  <a href="catalogo.html" class="btn btn-sm btn-outline-danger rounded-pill">Cotizar</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="card card-prod h-100">
+              <img src="img/maggi800.png" class="card-img-top" alt="Jugo MAGGI 800ml">
+              <div class="card-body d-flex flex-column justify-content-between">
+                <div>
+                  <span class="badge bg-danger bg-opacity-10 text-danger rounded-pill mb-2">Nestlé</span>
+                  <h5 class="card-title fw-bold fs-6">Jugo MAGGI® Sazonador 800ml</h5>
+                  <p class="card-text text-secondary small">Sazonador líquido concentrado para carnes, sopas y botanas.
+                    Presentación food service.</p>
+                </div>
+                <div class="pt-3 border-top mt-2 d-flex justify-content-between align-items-center">
+                  <span class="small text-muted">Clave: 12482812</span>
+                  <a href="catalogo.html" class="btn btn-sm btn-outline-danger rounded-pill">Cotizar</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="card card-prod h-100">
+              <img src="img/chocoabue216.jpeg" class="card-img-top" alt="CHOCOLATE ABUELITA 2.16kg">
+              <div class="card-body d-flex flex-column justify-content-between">
+                <div>
+                  <span class="badge bg-danger bg-opacity-10 text-danger rounded-pill mb-2">Nestlé</span>
+                  <h5 class="card-title fw-bold fs-6">CHOCOLATE ABUELITA® 2.16kg</h5>
+                  <p class="card-text text-secondary small">Chocolate para mesa tradicional con auténtico sabor a
+                    canela. Caja con 6 unidades.</p>
+                </div>
+                <div class="pt-3 border-top mt-2 d-flex justify-content-between align-items-center">
+                  <span class="small text-muted">Clave: 12340733</span>
+                  <a href="catalogo.html" class="btn btn-sm btn-outline-danger rounded-pill">Cotizar</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="card card-prod h-100">
+              <img src="img/inglesa19.webp" class="card-img-top" alt="Salsa Inglesa Crosse & Blackwell 1.9L">
+              <div class="card-body d-flex flex-column justify-content-between">
+                <div>
+                  <span class="badge bg-danger bg-opacity-10 text-danger rounded-pill mb-2">Nestlé</span>
+                  <h5 class="card-title fw-bold fs-6">CROSSE & BLACKWELL® 1.9L</h5>
+                  <p class="card-text text-secondary small">Salsa tipo inglesa formato 1.9 litros para sazonar carnes,
+                    mariscos y botanas.</p>
+                </div>
+                <div class="pt-3 border-top mt-2 d-flex justify-content-between align-items-center">
+                  <span class="small text-muted">Clave: 12482715</span>
+                  <a href="catalogo.html" class="btn btn-sm btn-outline-danger rounded-pill">Cotizar</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="card card-prod h-100">
+              <img src="img/carlos25.webp" class="card-img-top" alt="CARLOS V Chocolate 2.5kg">
+              <div class="card-body d-flex flex-column justify-content-between">
+                <div>
+                  <span class="badge bg-danger bg-opacity-10 text-danger rounded-pill mb-2">Nestlé</span>
+                  <h5 class="card-title fw-bold fs-6">CARLOS V® Chocolate 2.5kg</h5>
+                  <p class="card-text text-secondary small">El Rey de los Chocolates en bloque de cobertura para
+                    repostería y chocolatería.</p>
+                </div>
+                <div class="pt-3 border-top mt-2 d-flex justify-content-between align-items-center">
+                  <span class="small text-muted">Clave: 12280329</span>
+                  <a href="catalogo.html" class="btn btn-sm btn-outline-danger rounded-pill">Cotizar</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="card card-prod h-100">
+              <img src="img/cremacafe225.png" class="card-img-top" alt="COFFEE-MATE Crema 22.5kg">
+              <div class="card-body d-flex flex-column justify-content-between">
+                <div>
+                  <span class="badge bg-danger bg-opacity-10 text-danger rounded-pill mb-2">Nestlé</span>
+                  <h5 class="card-title fw-bold fs-6">COFFEE-MATE® Crema 22.5kg</h5>
+                  <p class="card-text text-secondary small">Sustituto de crema en polvo para máxima cremosidad en
+                    bebidas y helados.</p>
+                </div>
+                <div class="pt-3 border-top mt-2 d-flex justify-content-between align-items-center">
+                  <span class="small text-muted">Clave: 12577070</span>
+                  <a href="catalogo.html" class="btn btn-sm btn-outline-danger rounded-pill">Cotizar</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="card card-prod h-100">
+              <img src="img/lechera3leches1l.png" class="card-img-top" alt="LA LECHERA Tres Leches 1kg">
+              <div class="card-body d-flex flex-column justify-content-between">
+                <div>
+                  <span class="badge bg-danger bg-opacity-10 text-danger rounded-pill mb-2">Nestlé</span>
+                  <h5 class="card-title fw-bold fs-6">LA LECHERA® Tres Leches 1kg</h5>
+                  <p class="card-text text-secondary small">Mezcla única con el equilibrio y sabor original para
+                    pasteles tres leches.</p>
+                </div>
+                <div class="pt-3 border-top mt-2 d-flex justify-content-between align-items-center">
+                  <span class="small text-muted">Clave: 12308903</span>
+                  <a href="catalogo.html" class="btn btn-sm btn-outline-danger rounded-pill">Cotizar</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="modal-footer border-0">
-        <button type="button" class="btn btn-secondary rounded-pill" data-bs-dismiss="modal">Cerrar</button>
-        <a href="#contacto" class="btn btn-danger rounded-pill" data-bs-dismiss="modal">Solicitar cotización</a>
+      <div class="text-center mt-5">
+        <a href="catalogo.html" class="btn btn-outline-danger rounded-pill px-5 py-2 fw-semibold">Ver catálogo completo
+          <i class="bi bi-arrow-right-circle"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Nosotros: breve misión / valores -->
+  <section id="nosotros" class="py-5">
+    <div class="container py-4">
+      <div class="row align-items-center">
+        <div class="col-lg-6 mb-4 mb-lg-0">
+          <span class="badge bg-dark bg-opacity-10 text-dark rounded-pill mb-3">Quiénes somos</span>
+          <h2 class="fw-bold mb-3">Comprometidos con el abasto y la calidad</h2>
+          <p class="text-secondary">TAQ nace como una empresa comercializadora con el objetivo de ofrecer a negocios y
+            mayoristas los productos más demandados de Nestlé. Contamos con cadena de suministro eficiente, precios
+            justos y atención personalizada.</p>
+          <div class="row mt-4">
+            <div class="col-md-6 mb-3">
+              <div class="d-flex gap-2">
+                <i class="bi bi-check-circle-fill text-danger fs-4"></i>
+                <div><strong>+10 años de experiencia</strong><br><small class="text-secondary">Respaldo en distribución
+                    B2B</small></div>
+              </div>
+            </div>
+            <div class="col-md-6 mb-3">
+              <div class="d-flex gap-2">
+                <i class="bi bi-shield-check text-danger fs-4"></i>
+                <div><strong>Garantía de frescura</strong><br><small class="text-secondary">Productos directo de
+                    fábrica</small></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="bg-white p-4 rounded-4 shadow-sm">
+            <div class="d-flex gap-3 align-items-center border-bottom pb-3 mb-3">
+              <i class="bi bi-trophy-fill fs-1 text-warning"></i>
+              <div>
+                <h5 class="mb-0 fw-bold">Distribuidores autorizados</h5><span class="text-muted small">Certificados por
+                  Nestlé</span>
+              </div>
+            </div>
+            <p>Nuestro compromiso es entregar puntualmente cada pedido, brindar asesoría comercial y garantizar la mejor
+              experiencia a nuestros clientes. Somos el puente confiable entre las grandes marcas y tu negocio.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Formulario de contacto + Mapa / Detalles -->
+  <section id="contacto" class="py-5 bg-light">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="section-title text-center" style="display: inline-block;">Hablemos de negocios</h2>
+        <p class="text-muted mt-3">Cuéntanos tus requerimientos, te asesoramos sin compromiso</p>
+      </div>
+      <div class="row g-5">
+        <div class="col-lg-6">
+          <div class="contact-form p-4 p-md-5">
+            <h4 class="fw-bold mb-3">Solicita cotización o información</h4>
+            <form id="contactForm" action="#" method="POST">
+              <div class="mb-3">
+                <label for="nombre" class="form-label fw-semibold">Nombre completo *</label>
+                <input type="text" class="form-control rounded-pill" id="nombre" placeholder="Ej: Carlos Rodríguez"
+                  required>
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label fw-semibold">Correo electrónico *</label>
+                <input type="email" class="form-control rounded-pill" id="email" placeholder="empresa@ejemplo.com"
+                  required>
+              </div>
+              <div class="mb-3">
+                <label for="telefono" class="form-label fw-semibold">Teléfono / WhatsApp</label>
+                <input type="tel" class="form-control rounded-pill" id="telefono" placeholder="+52 771 677 4014">
+              </div>
+              <div class="mb-3">
+                <label for="mensaje" class="form-label fw-semibold">Mensaje o productos de interés *</label>
+                <textarea class="form-control" id="mensaje" rows="4"
+                  placeholder="Me interesa cotizar café Nescafé y productos Nestlé para mi negocio..."
+                  required></textarea>
+              </div>
+              <div class="d-grid">
+                <button type="submit" class="btn btn-primary-custom text-white rounded-pill py-2 fw-semibold"
+                  id="btnEnviar"><i class="bi bi-whatsapp me-1"></i> Enviar por WhatsApp</button>
+              </div>
+              <div id="formFeedback" class="mt-3 text-center small fw-semibold"></div>
+            </form>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="h-100 d-flex flex-column justify-content-between">
+            <div class="bg-white p-4 rounded-4 shadow-sm mb-4">
+              <h5 class="fw-bold"><i class="bi bi-geo-alt-fill text-danger me-2"></i> Oficinas principales</h5>
+              <p class="mb-1">Carr. México - Pachuca 80, Matilde, 43830 Pachuca de Soto, Hgo.</p>
+              <hr>
+              <h5 class="fw-bold mt-3"><i class="bi bi-envelope-fill text-danger me-2"></i> Contacto directo</h5>
+              <p class="mb-1">ventas@taqdistribuciones.com</p>
+              <p><i class="bi bi-telephone-fill"></i> +52 771 677 4014</p>
+              <hr>
+              <h5 class="fw-bold"><i class="bi bi-clock-history me-2"></i> Horario de atención</h5>
+              <p>Lunes a Viernes: 9:00 AM - 6:00 PM<br>Sábados: 10:00 AM - 2:00 PM</p>
+            </div>
+            <div class="bg-white p-3 rounded-4 text-center shadow-sm">
+              <p class="mb-0 fw-semibold">¿Eres minorista o mayorista? <a href="#" class="text-danger"
+                  data-bs-toggle="modal" data-bs-target="#modalCondiciones">Ver condiciones comerciales</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="pt-5 pb-4">
+    <div class="container">
+      <div class="row gy-4">
+        <div class="col-md-4">
+          <h4 class="fw-bold text-white">TAQ<span class="fw-light text-white-50"> Distribuciones</span></h4>
+          <p class="text-white-70 small">Distribuidores autorizados de Nestlé, brindando soluciones comerciales con
+            puntualidad y garantía.</p>
+          <div class="d-flex gap-3">
+            <a href="#" class="text-white-50"><i class="bi bi-facebook fs-5"></i></a>
+            <a href="#" class="text-white-50"><i class="bi bi-instagram fs-5"></i></a>
+            <a href="#" class="text-white-50"><i class="bi bi-linkedin fs-5"></i></a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <h6 class="fw-semibold text-white">Enlaces rápidos</h6>
+          <ul class="list-unstyled">
+            <li><a href="index.html" class="text-white-50 text-decoration-none small">Inicio</a></li>
+            <li><a href="catalogo.html" class="text-white-50 text-decoration-none small">Catálogo</a></li>
+            <li><a href="nosotros.html" class="text-white-50 text-decoration-none small">Nosotros</a></li>
+            <li><a href="contacto.html" class="text-white-50 text-decoration-none small">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h6 class="fw-semibold text-white">Legales</h6>
+          <p class="small text-white-50">TAQ Comercializadora © 2025 <br>Todos los derechos reservados. <br>La marca
+            Nestlé es propiedad de sus respectivos dueños.</p>
+        </div>
+      </div>
+      <hr class="opacity-25">
+      <div class="text-center small text-white-50">Diseño profesional con Bootstrap 5 | TAQ - Soluciones en distribución
+      </div>
+    </div>
+  </footer>
+
+  <!-- Botón flotante de WhatsApp (enlace directo) -->
+  <a href="https://wa.me/527716774014?text=Hola%20TAQ%2C%20me%20interesa%20informaci%C3%B3n%20sobre%20productos%20Nestl%C3%A9"
+    class="btn-whatsapp-fixed" target="_blank" rel="noopener noreferrer">
+    <i class="bi bi-whatsapp"></i>
+  </a>
+
+  <!-- Modal condiciones comerciales (extra) -->
+  <div class="modal fade" id="modalCondiciones" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content rounded-4">
+        <div class="modal-header border-0">
+          <h5 class="modal-title fw-bold">Condiciones para distribuidores</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>Ofrecemos precios por volumen, entregas programadas y facturación. Contáctanos para recibir tabla de
+            precios exclusiva para mayoristas y descuentos por temporada.</p>
+          <p class="mb-0">*Ventas sujetas a disponibilidad de inventario, aplican términos y condiciones por zona
+            geográfica.</p>
+        </div>
+        <div class="modal-footer border-0">
+          <button type="button" class="btn btn-secondary rounded-pill" data-bs-dismiss="modal">Cerrar</button>
+          <a href="#contacto" class="btn btn-danger rounded-pill" data-bs-dismiss="modal">Solicitar cotización</a>
+        </div>
       </div>
     </div>
   </div>
-</div>
 
-<!-- Bootstrap JS Bundle (para interactividad) -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-<!-- Script para feedback del formulario (simulación de envío) -->
-<script>
-  (function() {
-    const form = document.getElementById('contactForm');
-    const feedbackDiv = document.getElementById('formFeedback');
-    form.addEventListener('submit', function(e) {
-      e.preventDefault();
-      const nombre = document.getElementById('nombre').value.trim();
-      const email = document.getElementById('email').value.trim();
-      const telefono = document.getElementById('telefono').value.trim() || 'No especificado';
-      const mensaje = document.getElementById('mensaje').value.trim();
-      if(!nombre || !email || !mensaje) {
-        feedbackDiv.innerHTML = '<span class="text-danger">❌ Por favor completa los campos obligatorios (*).</span>';
-        return;
-      }
-      if(!email.includes('@') || !email.includes('.')) {
-        feedbackDiv.innerHTML = '<span class="text-danger">❌ Ingresa un correo electrónico válido.</span>';
-        return;
-      }
+  <!-- Bootstrap JS Bundle (para interactividad) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Script para feedback del formulario (simulación de envío) -->
+  <script>
+    (function () {
+      const form = document.getElementById('contactForm');
+      const feedbackDiv = document.getElementById('formFeedback');
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        const nombre = document.getElementById('nombre').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const telefono = document.getElementById('telefono').value.trim() || 'No especificado';
+        const mensaje = document.getElementById('mensaje').value.trim();
+        if (!nombre || !email || !mensaje) {
+          feedbackDiv.innerHTML = '<span class="text-danger">❌ Por favor completa los campos obligatorios (*).</span>';
+          return;
+        }
+        if (!email.includes('@') || !email.includes('.')) {
+          feedbackDiv.innerHTML = '<span class="text-danger">❌ Ingresa un correo electrónico válido.</span>';
+          return;
+        }
 
-      let waMsg = `*NUEVO CONTACTO DESDE EL SITIO WEB - TAQ*%0A%0A`;
-      waMsg += `👤 *Nombre:* ${encodeURIComponent(nombre)}%0A`;
-      waMsg += `📧 *Correo:* ${encodeURIComponent(email)}%0A`;
-      waMsg += `📞 *Teléfono:* ${encodeURIComponent(telefono)}%0A`;
-      waMsg += `💬 *Mensaje:* ${encodeURIComponent(mensaje)}`;
+        let waMsg = `*NUEVO CONTACTO DESDE EL SITIO WEB - TAQ*%0A%0A`;
+        waMsg += `👤 *Nombre:* ${encodeURIComponent(nombre)}%0A`;
+        waMsg += `📧 *Correo:* ${encodeURIComponent(email)}%0A`;
+        waMsg += `📞 *Teléfono:* ${encodeURIComponent(telefono)}%0A`;
+        waMsg += `💬 *Mensaje:* ${encodeURIComponent(mensaje)}`;
 
-      const waUrl = `https://wa.me/527716774014?text=${waMsg}`;
+        const waUrl = `https://wa.me/527716774014?text=${waMsg}`;
 
-      feedbackDiv.innerHTML = '<span class="text-success">✅ ¡Redirigiendo a WhatsApp para enviar tu mensaje...!</span>';
-      
-      setTimeout(() => {
-        window.open(waUrl, '_blank');
-        form.reset();
-        feedbackDiv.innerHTML = '';
-      }, 1000);
-    });
-  })();
-</script>
+        feedbackDiv.innerHTML = '<span class="text-success">✅ ¡Redirigiendo a WhatsApp para enviar tu mensaje...!</span>';
+
+        setTimeout(() => {
+          window.open(waUrl, '_blank');
+          form.reset();
+          feedbackDiv.innerHTML = '';
+        }, 1000);
+      });
+    })();
+  </script>
 </body>
+
 </html>

@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>Lista de Productos | TAQ Distribuidora</title>
+  <meta name="description" content="Lista de productos Nestlé de TAQ Distribuidora.">
+  
+  <!-- Bootstrap 5 CSS + Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <!-- Google Fonts: Inter -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+  
+  <style>
+    * { font-family: 'Inter', sans-serif; }
+    body { background-color: #f8fafc; scroll-behavior: smooth; color: #1e293b; }
+    
+    .brand-logo-text { font-weight: 800; letter-spacing: -0.5px; }
+
+    /* Header Banner */
+    .header-banner {
+      background: linear-gradient(135deg, #0a2b3e 0%, #173e54 100%);
+      color: white;
+    }
+    
+    .wa-badge {
+      background: #25D366;
+      color: white;
+      font-weight: 700;
+      padding: 8px 20px;
+      border-radius: 50px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      transition: transform 0.2s, background-color 0.2s;
+    }
+    .wa-badge:hover {
+      background-color: #20b859;
+      color: white;
+      transform: scale(1.04);
+    }
+
+    /* Botón flotante WhatsApp 7716781902 */
+    .btn-whatsapp-fixed {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      background-color: #25D366;
+      color: white;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 32px;
+      box-shadow: 0 10px 20px rgba(37, 211, 102, 0.4);
+      transition: all 0.25s ease-in-out;
+      z-index: 1040;
+      text-decoration: none;
+    }
+    .btn-whatsapp-fixed:hover {
+      background-color: #20b859;
+      transform: scale(1.08);
+      color: white;
+    }
+
+    /* Tarjetas de Producto (Solo Foto e Info) */
+    .card-prod {
+      border: 1px solid rgba(226, 232, 240, 0.8);
+      border-radius: 1.25rem;
+      transition: all 0.25s ease;
+      box-shadow: 0 6px 18px -4px rgba(0,0,0,0.06);
+      background: #ffffff;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+    .card-prod:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 28px -6px rgba(0,0,0,0.1);
+      border-color: rgba(10, 43, 62, 0.2);
+    }
+    .card-prod-img-wrap {
+      background-color: #f8fafc;
+      border-top-left-radius: 1.25rem;
+      border-top-right-radius: 1.25rem;
+      padding: 20px;
+      text-align: center;
+    }
+    .card-prod img {
+      object-fit: contain;
+      height: 200px;
+      width: 100%;
+      transition: transform 0.3s ease;
+    }
+    .card-prod:hover img {
+      transform: scale(1.04);
+    }
+    .sku-badge {
+      font-size: 0.75rem;
+      background: #eef2f7;
+      color: #475569;
+      padding: 3px 8px;
+      border-radius: 6px;
+      font-weight: 600;
+    }
+
+    /* Filtros y Buscador */
+    .filter-btn {
+      border-radius: 50px;
+      padding: 8px 18px;
+      font-weight: 500;
+      font-size: 0.88rem;
+      border: 1px solid #cbd5e1;
+      background-color: white;
+      color: #475569;
+      transition: all 0.2s;
+    }
+    .filter-btn:hover, .filter-btn.active {
+      background-color: #0a2b3e;
+      color: white;
+      border-color: #0a2b3e;
+    }
+    .search-box {
+      border-radius: 50px;
+      padding: 10px 22px;
+      border: 2px solid #e2e8f0;
+    }
+    .search-box:focus {
+      border-color: #0a2b3e;
+      box-shadow: 0 0 0 0.2rem rgba(10, 43, 62, 0.15);
+    }
+
+    @media (max-width: 768px) {
+      .btn-whatsapp-fixed { width: 52px; height: 52px; font-size: 26px; bottom: 20px; right: 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Encabezado Principal Banner -->
+<header class="header-banner py-4">
+  <div class="container text-center">
+    <a href="index.html" class="text-white text-decoration-none d-inline-block mb-2">
+      <span class="brand-logo-text fs-3">TAQ</span> <span class="fw-normal text-white-50">| Distribuidora</span>
+    </a>
+    <h1 class="h3 fw-bold mb-2">Lista de Productos</h1>
+    <a href="https://wa.me/527716781902?text=Hola%20TAQ%2C%20quisiera%20pedir%20informaci%C3%B3n%20sobre%20sus%20productos." target="_blank" class="wa-badge">
+      <i class="bi bi-whatsapp"></i> Contactar por WhatsApp: 771 678 1902
+    </a>
+  </div>
+</header>
+
+<!-- Buscador y Filtros -->
+<section class="py-4 bg-white border-bottom sticky-top" style="top: 0; z-index: 1020;">
+  <div class="container">
+    <div class="row align-items-center g-3">
+      <div class="col-md-5 col-lg-4">
+        <div class="input-group">
+          <span class="input-group-text bg-light border-end-0 rounded-start-pill ps-3"><i class="bi bi-search text-muted"></i></span>
+          <input type="text" id="searchInput" class="form-control search-box border-start-0 rounded-end-pill ps-0" placeholder="Buscar producto o clave..." aria-label="Buscar producto">
+        </div>
+      </div>
+      <div class="col-md-7 col-lg-8">
+        <div class="d-flex flex-wrap gap-2 justify-content-md-end" id="filterPills">
+          <button class="filter-btn active" data-filter="all">Todos</button>
+          <button class="filter-btn" data-filter="culinarios">Culinarios</button>
+          <button class="filter-btn" data-filter="lacteos">Lácteos & Repostería</button>
+          <button class="filter-btn" data-filter="chocolates">Chocolates</button>
+          <button class="filter-btn" data-filter="nescafe">Nescafé</button>
+          <button class="filter-btn" data-filter="endulzantes">Endulzantes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Grid de Productos (Únicamente Foto e Info) -->
+<main class="py-5">
+  <div class="container">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <h5 class="fw-bold mb-0 text-dark">Catálogo de Productos</h5>
+      <span class="text-muted small" id="productCount">Cargando productos...</span>
+    </div>
+
+    <!-- Contenedor Grid -->
+    <div class="row g-4" id="productsGrid">
+      <!-- Se genera mediante JS con Foto e Info únicamente -->
+    </div>
+
+    <!-- Estado Sin Resultados -->
+    <div id="noResults" class="text-center py-5 d-none">
+      <i class="bi bi-search fs-1 text-muted"></i>
+      <h5 class="fw-bold mt-3">No se encontraron productos</h5>
+      <p class="text-muted">Intenta buscar con otros términos.</p>
+      <button class="btn btn-outline-danger rounded-pill px-4" id="btnResetSearch">Ver todos los productos</button>
+    </div>
+  </div>
+</main>
+
+<!-- Botón flotante de WhatsApp Directo a 7716781902 -->
+<a href="https://wa.me/527716781902?text=Hola%20TAQ%2C%20quisiera%20informaci%C3%B3n%20sobre%20sus%20productos." class="btn-whatsapp-fixed" target="_blank" rel="noopener noreferrer" title="WhatsApp 7716781902">
+  <i class="bi bi-whatsapp"></i>
+</a>
+
+<!-- Scripts Bootstrap + Lógica de Búsqueda -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+  // Base de Datos de Productos TAQ
+  const productsData = [
+    // Culinarios
+    { id: "12479580", name: "Jugo MAGGI® Sazonador Líquido 100ml", brand: "Nestlé", category: "culinarios", format: "Charola con 24 x 100 ml", clave: "12479580", desc: "Sazonador líquido concentrado para carnes, sopas y botanas.", img: "img/maggi100.avif" },
+    { id: "12482812", name: "Jugo MAGGI® Sazonador Líquido 800ml", brand: "Nestlé", category: "culinarios", format: "Charola con 6 x 800 ml", clave: "12482812", desc: "Presentación ideal para restaurantes y taquerías.", img: "img/maggi800.png" },
+    { id: "12483742", name: "Jugo MAGGI® Sazonador Líquido 1.9L", brand: "Nestlé", category: "culinarios", format: "Caja con 4 x 1.9 L", clave: "12483742", desc: "Formato institucional gran volumen.", img: "img/maggi19.jpeg" },
+    { id: "12527654", name: "MAGGI® Mixer Miche 980ml", brand: "Nestlé", category: "culinarios", format: "Charola con 6 x 980 ml", clave: "12527654", desc: "Mezcla sazonadora especial para micheladas.", img: "img/maggimixer.webp" },
+    { id: "12566059", name: "MAGGI® Mixer Miche 1.9L", brand: "Nestlé", category: "culinarios", format: "Charola con 4 x 1.9 L", clave: "12566059", desc: "Mezcla sazonadora especial para coctelería.", img: "img/maggimixer19.jpeg" },
+    { id: "12482612", name: "CROSSE & BLACKWELL® Salsa Inglesa 145ml", brand: "Nestlé", category: "culinarios", format: "Charola con 24 x 145 ml", clave: "12482612", desc: "Salsa tipo inglesa sabor tradicional.", img: "img/inglesa145.webp" },
+    { id: "12532559", name: "CROSSE & BLACKWELL® Salsa Inglesa 980ml", brand: "Nestlé", category: "culinarios", format: "Charola con 6 x 980 ml", clave: "12532559", desc: "Salsa tipo inglesa en botella de 980ml.", img: "img/inglesa980.webp" },
+    { id: "12482715", name: "CROSSE & BLACKWELL® Salsa Inglesa 1.9L", brand: "Nestlé", category: "culinarios", format: "Charola con 4 x 1.9 L", clave: "12482715", desc: "Salsa tipo inglesa formato 1.9L.", img: "img/inglesa19.webp" },
+    { id: "12605067", name: "MAGGI® SOYA Salsa de Soya 1.9L", brand: "Nestlé", category: "culinarios", format: "Charola con 4 x 1.9 L", clave: "12605067", desc: "Salsa de soya concentrada para sazonar.", img: "img/soyamaggi19.jpeg" },
+    { id: "12524822", name: "MINOR'S® Salsa Teriyaki", brand: "Nestlé", category: "culinarios", format: "Caja con 4 x 2.17 kg c/u", clave: "12524822", desc: "Salsa teriyaki lista para usar.", img: "img/teriyaki27.png" },
+    { id: "12533354", name: "CHEF® Crustáceos Fondo Deshidratado", brand: "Nestlé", category: "culinarios", format: "Caja con 4 x 900 g", clave: "12533354", desc: "Fondo de crustáceos deshidratado en polvo.", img: "img/crustaceo.png" },
+
+    // Lácteos & Repostería
+    { id: "12340735", name: "NESTLÉ® Crema para Batir", brand: "Nestlé", category: "lacteos", format: "Caja con 12 x 950 ml", clave: "12340735", desc: "Crema líquida de sabor neutro para batir.", img: "img/batir950.png" },
+    { id: "12140454", name: "CARNATION® CLAVEL® Leche Evaporada 1kg", brand: "Nestlé", category: "lacteos", format: "Caja con 12 x 1 kg", clave: "12140454", desc: "Leche evaporada cremosa para uso gastronómico.", img: "img/evaporada1kg.webp" },
+    { id: "12308903", name: "LA LECHERA® Tres Leches", brand: "Nestlé", category: "lacteos", format: "Caja con 12 x 1 kg", clave: "12308903", desc: "Mezcla para pasteles tres leches.", img: "img/lechera3leches1l.png" },
+    { id: "12393464", name: "NESTLÉ® Media Crema 1L", brand: "Nestlé", category: "lacteos", format: "Caja con 12 x 1 L", clave: "12393464", desc: "Doble consistencia para platillos salados y postres.", img: "img/mediacrema1.webp" },
+    { id: "12577403", name: "CARLOS V® Crema para Batir 1.13kg", brand: "Nestlé", category: "lacteos", format: "Caja con 12 x 1.13 kg", clave: "12577403", desc: "Crema para batir sabor chocolate Carlos V®.", img: "img/carlosbatir1.webp" },
+    { id: "12383025", name: "LA LECHERA® Cubeta 25.5kg", brand: "Nestlé", category: "lacteos", format: "Cubeta con 25.5 kg", clave: "12383025", desc: "Leche condensada 100% de vaca en presentación de 25.5kg.", img: "img/lechera45.png" },
+    { id: "12383020", name: "LA LECHERA® Untable Original 4.5kg", brand: "Nestlé", category: "lacteos", format: "Corrugado con 4 x 4.5 kg", clave: "12383020", desc: "Leche condensada untable 100% de vaca.", img: "img/lechera45.png" },
+    { id: "12385848", name: "LA LECHERA® Untable Dulce de Leche 4.5kg", brand: "Nestlé", category: "lacteos", format: "Caja con 4 x 4.5 kg", clave: "12385848", desc: "Dulce de leche cremoso para panadería.", img: "img/dulceleche45.png" },
+    { id: "12568179", name: "MANGA LA LECHERA® Untable Original 1kg", brand: "Nestlé", category: "lacteos", format: "Formato 1 kg (Manga)", clave: "12568179", desc: "Formato práctico en manga decoradora.", img: "img/lecheramanga.webp" },
+    { id: "12568200", name: "MANGA LA LECHERA® Untable Dulce de Leche 1kg", brand: "Nestlé", category: "lacteos", format: "Formato 1 kg (Manga)", clave: "12568200", desc: "Dulce de leche en manga decoradora.", img: "img/dulcemanga.webp" },
+    { id: "8500067", name: "NESTLÉ® Leche en Polvo Saco 35kg", brand: "Nestlé", category: "lacteos", format: "Saco con 35 kg", clave: "8500067", desc: "Leche entera en polvo adicionada con vitaminas.", img: "img/polvo35.png" },
+    { id: "8500078", name: "NESTLÉ® Leche en Polvo Caja 10kg", brand: "Nestlé", category: "lacteos", format: "Caja con 10 kg", clave: "8500078", desc: "Leche entera en polvo para procesos panificadores.", img: "img/lechepolvo10.png" },
+    { id: "12577070", name: "COFFEE-MATE® Sustituto de Crema 22.5kg", brand: "Nestlé", category: "lacteos", format: "1 bolsa de 22.5 kg", clave: "12577070", desc: "Sustituto de crema en polvo para bebidas.", img: "img/cremacafe225.png" },
+
+    // Chocolates
+    { id: "12340733", name: "CHOCOLATE ABUELITA® Tableta 2.16kg", brand: "Nestlé", category: "chocolates", format: "Caja con 6 x 2.160 Kg c/u", clave: "12340733", desc: "Chocolate para mesa tradicional con canela.", img: "img/chocoabue216.jpeg" },
+    { id: "12340732", name: "NESTLÉ® Callets Chocolate Semiamargo", brand: "Nestlé", category: "chocolates", format: "Caja con 4 x 2.52 Kg c/u", clave: "12340732", desc: "59% de cacao. Ideal para fundir.", img: "img/chocoamargo25.jpg" },
+    { id: "12280329", name: "CARLOS V® Chocolate con Leche 2.5kg", brand: "Nestlé", category: "chocolates", format: "Caja con 4 x 2.5 Kg c/u", clave: "12280329", desc: "Bloque de cobertura sabor chocolate con leche.", img: "img/carlos25.webp" },
+    { id: "12577524", name: "CARLOS V® Mix de Brownie", brand: "Nestlé", category: "chocolates", format: "Caja con 10 x 1 Kg c/u", clave: "12577524", desc: "Harina preparada para brownies de chocolate.", img: "img/carlosharina1.jpg" },
+    { id: "12568422", name: "CARLOS V® Untable 4kg", brand: "Nestlé", category: "chocolates", format: "Caja con 2 x 4Kg c/u", clave: "12568422", desc: "Crema de cacao sabor Carlos V®.", img: "img/carlos4kg.png" },
+    { id: "12568176", name: "CARLOS V® Untable Blanco 4kg", brand: "Nestlé", category: "chocolates", format: "Caja con 2 x 4 Kg c/u", clave: "12568176", desc: "Crema sabor chocolate blanco.", img: "img/carlosblanco4.png" },
+    { id: "12568194", name: "ABUELITA® Untable 4kg", brand: "Nestlé", category: "chocolates", format: "Caja con 2 x 4 Kg c/u", clave: "12568194", desc: "Crema de cacao sabor a canela Abuelita®.", img: "img/chocoabue4kg.webp" },
+    { id: "12603026", name: "CRUNCH® Untable 4.1kg", brand: "Nestlé", category: "chocolates", format: "Caja con 2 x 4.1 Kg c/u", clave: "12603026", desc: "Crema de cacao con arroz inflado.", img: "img/crunch38.webp" },
+    { id: "12342437", name: "KIT KAT® Oblea Cubierta Chocolate", brand: "Nestlé", category: "chocolates", format: "Caja con 4 x 24 x 41.5 g c/u", clave: "12342437", desc: "Oblea cubierta de chocolate en empaque display.", img: "img/kitchoco24.webp" },
+    { id: "12076239", name: "CHOCOLATE CRUNCH® Troceado 9kg", brand: "Nestlé", category: "chocolates", format: "Caja con 9 kg", clave: "12076239", desc: "Trozos de chocolate con arroz inflado para toppings.", img: "img/crunch9kg.png" },
+    { id: "12279053", name: "ABUELITA® Granulado 8x1kg", brand: "Nestlé", category: "chocolates", format: "Caja con 8 bolsas de 1 kg c/u", clave: "12279053", desc: "Chocolate granulado para disolver.", img: "img/chocoabue1kg.png" },
+    { id: "12576837", name: "NESTLÉ® CHOCOLATERÍA Cocoa 5kg", brand: "Nestlé", category: "chocolates", format: "Caja con 5 kg", clave: "12576837", desc: "Cocoa alcalina pura para repostería.", img: "img/cocoa5kg.jpg" },
+
+    // Nescafé & Bebidas
+    { id: "12278309", name: "NESCAFÉ® CLÁSICO® Bolsas 400g", brand: "Nestlé", category: "nescafe", format: "Caja con 5 bolsas de 400 g c/u", clave: "12278309", desc: "Café 100% soluble. Rinde 200 tazas por bolsa.", img: "img/cafebolsa400.webp" },
+    { id: "12221711", name: "NESCAFÉ® CLÁSICO® Lata 1kg", brand: "Nestlé", category: "nescafe", format: "Charola con 4 latas de 1 kg", clave: "12221711", desc: "Café 100% soluble. Rinde 500 tazas por lata.", img: "img/lata1kg.jpg" },
+    { id: "12221710", name: "NESCAFÉ® DOLCA® Lata 1kg", brand: "Nestlé", category: "nescafe", format: "Charola con 4 latas de 1 kg", clave: "12221710", desc: "Café soluble mezclado con caramelizado.", img: "img/dolcalata1kg.jpg" },
+    { id: "12221712", name: "NESCAFÉ® CLÁSICO® Lata 1.2kg", brand: "Nestlé", category: "nescafe", format: "Charola con 6 latas de 1.2 kg", clave: "12221712", desc: "Formato rendidor 600 tazas por lata.", img: "img/clasico12.png" },
+    { id: "12392888", name: "NESCAFÉ® CLÁSICO® Lata 1.5kg", brand: "Nestlé", category: "nescafe", format: "Charola con 6 latas de 1.5 kg", clave: "12392888", desc: "Rinde 750 tazas. Máximo ahorro.", img: "img/clasico15.png" },
+    { id: "8500297", name: "NESCAFÉ® CLÁSICO® Bolsa 5kg", brand: "Nestlé", category: "nescafe", format: "Caja con 1 bolsa de 5 kg", clave: "8500297", desc: "Formato gigante para dispensadores.", img: "img/5kg.webp" },
+    { id: "8503097", name: "NESCAFÉ® CLÁSICO® Stick 2g", brand: "Nestlé", category: "nescafe", format: "Caja con 18 estuches de 50 sticks", clave: "8503097", desc: "Sobres individuales de 2g.", img: "img/clasico50.png" },
+    { id: "8503096", name: "NESCAFÉ® DECAF® Stick 2g", brand: "Nestlé", category: "nescafe", format: "Caja con 18 estuches de 50 sticks", clave: "8503096", desc: "Café descafeinado en sobres individuales.", img: "img/50.webp" },
+    { id: "12598124", name: "NESCAFÉ® FRAPPÉ 1.5kg", brand: "Nestlé", category: "nescafe", format: "Charola de 6 latas de 1.5 kg", clave: "12598124", desc: "Mezcla en polvo para preparar frappé.", img: "img/frappe15.webp" },
+    { id: "12535076", name: "NESQUIK® Polvo 5kg", brand: "Nestlé", category: "nescafe", format: "1 caja de 5 kg", clave: "12535076", desc: "Polvo para bebida sabor chocolate.", img: "img/polvo5kg.webp" },
+    { id: "12577170", name: "COFFEE-MATE® Original Sticks 4g", brand: "Nestlé", category: "nescafe", format: "Caja con 6 estuches con 200 sticks", clave: "12577170", desc: "Sticks individuales de sustituto de crema.", img: "img/cofemate.webp" },
+
+    // Endulzantes
+    { id: "12406487", name: "SPLENDA® Stevia Sobres", brand: "Nestlé", category: "endulzantes", format: "Caja con 400 sobres de 1 g c/u", clave: "12406487", desc: "Edulcorante sabor stevia.", img: "img/stevia400.png" },
+    { id: "12036071", name: "SPLENDA® Original 700 Sobres", brand: "Nestlé", category: "endulzantes", format: "Caja con 700 sobres de 1 g c/u", clave: "12036071", desc: "Edulcorante de mesa en sobres de 1g.", img: "img/700.png" },
+    { id: "12359495", name: "SPLENDA® Original 2,000 Sobres", brand: "Nestlé", category: "endulzantes", format: "Caja con 2,000 sobres de 1 g c/u", clave: "12359495", desc: "Presentación masiva para restaurantes.", img: "img/splenda2000.webp" }
+  ];
+
+  document.addEventListener('DOMContentLoaded', function() {
+    renderProducts(productsData);
+
+    const searchInput = document.getElementById('searchInput');
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const btnResetSearch = document.getElementById('btnResetSearch');
+
+    let currentFilter = 'all';
+
+    function applyFilterAndSearch() {
+      const term = searchInput.value.toLowerCase().trim();
+      const filtered = productsData.filter(p => {
+        const matchesFilter = (currentFilter === 'all') || (p.category === currentFilter);
+        const matchesSearch = !term || p.name.toLowerCase().includes(term) || p.clave.toLowerCase().includes(term);
+        return matchesFilter && matchesSearch;
+      });
+
+      renderProducts(filtered);
+
+      const noResults = document.getElementById('noResults');
+      if (filtered.length === 0) {
+        noResults.classList.remove('d-none');
+      } else {
+        noResults.classList.add('d-none');
+      }
+    }
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', function() {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        this.classList.add('active');
+        currentFilter = this.getAttribute('data-filter');
+        applyFilterAndSearch();
+      });
+    });
+
+    searchInput.addEventListener('input', applyFilterAndSearch);
+
+    if (btnResetSearch) {
+      btnResetSearch.addEventListener('click', function() {
+        searchInput.value = '';
+        currentFilter = 'all';
+        filterBtns.forEach(b => b.classList.remove('active'));
+        filterBtns[0].classList.add('active');
+        applyFilterAndSearch();
+      });
+    }
+  });
+
+  // Renderizado simple: Solo Foto + Info
+  function renderProducts(products) {
+    const grid = document.getElementById('productsGrid');
+    const countEl = document.getElementById('productCount');
+    countEl.textContent = `${products.length} productos`;
+
+    if (products.length === 0) {
+      grid.innerHTML = '';
+      return;
+    }
+
+    grid.innerHTML = products.map(p => {
+      return `
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="card card-prod">
+            <!-- FOTO -->
+            <div class="card-prod-img-wrap">
+              <img src="${p.img}" alt="${p.name}" loading="lazy" onerror="this.src='https://via.placeholder.com/200?text=TAQ+Nestle'">
+            </div>
+
+            <!-- INFO -->
+            <div class="card-body p-3">
+              <div class="d-flex justify-content-between align-items-center mb-1">
+                <span class="sku-badge">SKU: ${p.clave}</span>
+                <span class="text-muted small">${p.brand}</span>
+              </div>
+              <h6 class="fw-bold text-dark mb-1" style="font-size: 0.95rem; line-height: 1.3;">${p.name}</h6>
+              <p class="text-secondary small mb-2" style="font-size: 0.82rem;"><i class="bi bi-box-seam me-1"></i> ${p.format}</p>
+              <p class="text-muted small mb-0" style="font-size: 0.8rem;">${p.desc}</p>
+            </div>
+          </div>
+        </div>
+      `;
+    }).join('');
+  }
+</script>
+
+</body>
+</html>
