@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
@@ -8,16 +9,33 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <!-- Google Fonts: Inter -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap"
+    rel="stylesheet">
   <style>
-    * { font-family: 'Inter', sans-serif; }
-    body { background-color: #fefefe; scroll-behavior: smooth; }
-    .navbar { box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05); }
+    * {
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background-color: #fefefe;
+      scroll-behavior: smooth;
+    }
+
+    .navbar {
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+    }
+
     .hero-nosotros {
       background: linear-gradient(135deg, #f8f9fc 0%, #e2e8f0 100%);
-      border-bottom: 1px solid rgba(0,0,0,0.05);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
     }
-    .brand-logo-text { font-weight: 800; letter-spacing: -0.5px; }
+
+    .brand-logo-text {
+      font-weight: 800;
+      letter-spacing: -0.5px;
+    }
+
     .btn-whatsapp-fixed {
       position: fixed;
       bottom: 28px;
@@ -31,27 +49,31 @@
       align-items: center;
       justify-content: center;
       font-size: 32px;
-      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
       transition: all 0.2s ease-in-out;
       z-index: 1040;
       text-decoration: none;
     }
+
     .btn-whatsapp-fixed:hover {
       background-color: #20b859;
       transform: scale(1.07);
       color: white;
     }
+
     .value-card {
       border: none;
       border-radius: 1.5rem;
       transition: all 0.25s ease;
       background: white;
-      box-shadow: 0 10px 30px -10px rgba(0,0,0,0.07);
+      box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.07);
     }
+
     .value-card:hover {
       transform: translateY(-8px);
-      box-shadow: 0 20px 40px -12px rgba(0,0,0,0.12);
+      box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.12);
     }
+
     .icon-box {
       width: 64px;
       height: 64px;
@@ -61,6 +83,7 @@
       justify-content: center;
       font-size: 28px;
     }
+
     .step-number {
       width: 48px;
       height: 48px;
@@ -74,6 +97,7 @@
       font-size: 20px;
       margin-bottom: 1rem;
     }
+
     .stat-card {
       background: #0a2b3e;
       color: white;
@@ -81,186 +105,223 @@
       padding: 2.5rem 1.5rem;
       text-center: center;
     }
-    footer { background-color: #0a2b3e; color: #e0e7ed; }
-    .brand-color-nestle { color: #C22B2B; }
+
+    footer {
+      background-color: #0a2b3e;
+      color: #e0e7ed;
+    }
+
+    .brand-color-nestle {
+      color: #C22B2B;
+    }
 
     @media (max-width: 768px) {
-      .btn-whatsapp-fixed { width: 52px; height: 52px; font-size: 28px; bottom: 20px; right: 20px; }
+      .btn-whatsapp-fixed {
+        width: 52px;
+        height: 52px;
+        font-size: 28px;
+        bottom: 20px;
+        right: 20px;
+      }
     }
   </style>
 </head>
+
 <body>
 
-<!-- Navegación -->
-<nav class="navbar navbar-expand-lg bg-white py-3 sticky-top">
-  <div class="container">
-    <a class="navbar-brand fw-bold fs-4" href="index.html">
-      <span class="brand-logo-text text-dark">TAQ</span> <span class="fw-normal text-secondary">| Distribuciones</span>
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarMain">
-      <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-2">
-        <li class="nav-item"><a class="nav-link fw-semibold" href="index.html">Inicio</a></li>
-        <li class="nav-item"><a class="nav-link fw-semibold" href="catalogo.html">Catálogo</a></li>
-        <li class="nav-item"><a class="nav-link fw-semibold active text-danger" href="nosotros.html">Nosotros</a></li>
-        <li class="nav-item"><a class="nav-link fw-semibold" href="contacto.html">Contacto</a></li>
-      </ul>
-      <a href="contacto.html" class="btn btn-danger rounded-pill ms-lg-3 px-4">Cotizar <i class="bi bi-arrow-right-short"></i></a>
-    </div>
-  </div>
-</nav>
-
-<!-- Hero / Presentación -->
-<section class="hero-nosotros py-5">
-  <div class="container py-4">
-    <div class="row align-items-center g-5">
-      <div class="col-lg-6">
-        <span class="badge bg-danger bg-opacity-10 text-danger rounded-pill px-3 py-2 mb-3 fw-semibold"><i class="bi bi-building"></i> Nuestra Empresa</span>
-        <h1 class="display-4 fw-bold mb-3">Conecta tu negocio con las marcas más queridas de México</h1>
-        <p class="lead text-secondary mb-4">En <strong>TAQ Distribuciones</strong> unimos fuerzas con líderes de la industria alimentaria como <span class="brand-color-nestle fw-bold">Nestlé</span> para garantizar el abastecimiento eficiente, continuo y seguro para tu negocio.</p>
-        <div class="d-flex flex-wrap gap-3">
-          <a href="catalogo.html" class="btn btn-danger rounded-pill px-4 py-2 fw-semibold">Explorar Catálogo <i class="bi bi-box-seam"></i></a>
-          <a href="contacto.html" class="btn btn-outline-dark rounded-pill px-4 py-2 fw-semibold">Contáctanos</a>
-        </div>
-      </div>
-      <div class="col-lg-6 text-center">
-        <img src="logooo.jpeg" alt="Instalaciones TAQ" class="img-fluid rounded-4 shadow-lg" style="max-height: 400px; width: 100%; object-fit: cover;">
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Misión, Visión y Compromiso -->
-<section class="py-5 bg-white">
-  <div class="container py-4">
-    <div class="row g-4">
-      <div class="col-md-4">
-        <div class="value-card p-4 h-100 border">
-          <div class="icon-box bg-danger bg-opacity-10 text-danger mb-4">
-            <i class="bi bi-bullseye"></i>
-          </div>
-          <h4 class="fw-bold mb-3">Nuestra Misión</h4>
-          <p class="text-secondary mb-0">Ser la solución logística y comercial preferida por comercios, supermercados y mayoristas, proporcionando productos alimenticios e ingredientes de la más alta calidad con entregas puntuales y transparentes.</p>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="value-card p-4 h-100 border">
-          <div class="icon-box bg-primary bg-opacity-10 text-primary mb-4">
-            <i class="bi bi-eye"></i>
-          </div>
-          <h4 class="fw-bold mb-3">Nuestra Visión</h4>
-          <p class="text-secondary mb-0">Consolidarnos como el distribuidor autorizado líder en la región central del país, expandiendo continuamente nuestras rutas y adaptándonos a las exigencias de un mercado moderno y dinámico.</p>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="value-card p-4 h-100 border">
-          <div class="icon-box bg-success bg-opacity-10 text-success mb-4">
-            <i class="bi bi-shield-check"></i>
-          </div>
-          <h4 class="fw-bold mb-3">Garantía de Calidad</h4>
-          <p class="text-secondary mb-0">Cada lote de productos Nestlé que pasa por nuestros almacenes es manejado bajo rigurosos controles de almacenamiento, rotación de inventarios (FIFO) y fechas de caducidad certificadas.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Estadísticas / Indicadores -->
-<section class="py-5 bg-white">
-  <div class="container py-4">
-    <div class="row g-4 text-center">
-      <div class="col-6 col-lg-3">
-        <div class="stat-card">
-          <h2 class="display-4 fw-bold text-warning mb-1">+10</h2>
-          <p class="mb-0 text-white-50">Años de Experiencia</p>
-        </div>
-      </div>
-      <div class="col-6 col-lg-3">
-        <div class="stat-card">
-          <h2 class="display-4 fw-bold text-info mb-1">+100</h2>
-          <p class="mb-0 text-white-50">Clientes Satisfechos</p>
-        </div>
-      </div>
-      <div class="col-6 col-lg-3">
-        <div class="stat-card">
-          <h2 class="display-4 fw-bold text-success mb-1">99.8%</h2>
-          <p class="mb-0 text-white-50">Entregas a Tiempo</p>
-        </div>
-      </div>
-      <div class="col-6 col-lg-3">
-        <div class="stat-card">
-          <h2 class="display-4 fw-bold text-danger mb-1">100%</h2>
-          <p class="mb-0 text-white-50">Garantía de Origen</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Distribuidores Oficiales Nestlé -->
-<section class="py-5 bg-light border-top">
-  <div class="container">
-    <div class="row align-items-center g-5">
-      <div class="col-lg-6">
-        <span class="badge bg-danger text-white rounded-pill px-3 py-2 mb-3">Aliados de Confianza</span>
-        <h2 class="fw-bold mb-3">Respaldo directo de la marca número uno</h2>
-        <p class="text-secondary mb-4">Trabajar de la mano con las plantas de producción de Nestlé nos permite ofrecer precios de primera mano, acceso a lanzamientos exclusivos y volumen garantizado en temporadas altas.</p>
-        <ul class="list-unstyled d-flex flex-column gap-2 mb-4">
-          <li class="d-flex align-items-center gap-2"><i class="bi bi-check-circle-fill text-success fs-5"></i> <span>Facturación directa con requisitos fiscales completos</span></li>
-          <li class="d-flex align-items-center gap-2"><i class="bi bi-check-circle-fill text-success fs-5"></i> <span>Descuentos escalonados según volumen de pedido</span></li>
-          <li class="d-flex align-items-center gap-2"><i class="bi bi-check-circle-fill text-success fs-5"></i> <span>Asesoría comercial personalizada para cada tipo de negocio</span></li>
+  <!-- Navegación -->
+  <nav class="navbar navbar-expand-lg bg-white py-3 sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold fs-4" href="index.html">
+        <span class="brand-logo-text text-dark">TAQ</span> <span class="fw-normal text-secondary">|
+          Distribuciones</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarMain">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-2">
+          <li class="nav-item"><a class="nav-link fw-semibold" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link fw-semibold" href="catalogo.html">Catálogo</a></li>
+          <li class="nav-item"><a class="nav-link fw-semibold active text-danger" href="nosotros.html">Nosotros</a></li>
+          <li class="nav-item"><a class="nav-link fw-semibold" href="contacto.html">Contacto</a></li>
         </ul>
-        <a href="contacto.html" class="btn btn-dark rounded-pill px-4 py-2">Hablar con un Asesor</a>
+        <a href="contacto.html" class="btn btn-danger rounded-pill ms-lg-3 px-4">Cotizar <i
+            class="bi bi-arrow-right-short"></i></a>
       </div>
-      <div class="col-lg-6">
-        <div class="bg-white p-5 rounded-4 shadow-sm text-center border h-100 d-flex flex-column align-items-center justify-content-center">
-          <i class="bi bi-cup-hot-fill fs-1 text-danger mb-3"></i>
-          <h4 class="fw-bold text-danger mb-2">Nestlé Professional</h4>
-          <p class="text-muted mb-0">Distribución oficial de la amplia gama Nestlé: Nescafé, Coffee-mate, La Lechera, Maggi, Crosse & Blackwell, Chocolates y Cereales.</p>
+    </div>
+  </nav>
+
+  <!-- Hero / Presentación -->
+  <section class="hero-nosotros py-5">
+    <div class="container py-4">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <span class="badge bg-danger bg-opacity-10 text-danger rounded-pill px-3 py-2 mb-3 fw-semibold"><i
+              class="bi bi-building"></i> Nuestra Empresa</span>
+          <h1 class="display-4 fw-bold mb-3">Conecta tu negocio con las marcas más queridas de México</h1>
+          <p class="lead text-secondary mb-4">En <strong>TAQ Distribuciones</strong> unimos fuerzas con líderes de la
+            industria alimentaria como <span class="brand-color-nestle fw-bold">Nestlé</span> para garantizar el
+            abastecimiento eficiente, continuo y seguro para tu negocio.</p>
+          <div class="d-flex flex-wrap gap-3">
+            <a href="catalogo.html" class="btn btn-danger rounded-pill px-4 py-2 fw-semibold">Explorar Catálogo <i
+                class="bi bi-box-seam"></i></a>
+            <a href="contacto.html" class="btn btn-outline-dark rounded-pill px-4 py-2 fw-semibold">Contáctanos</a>
+          </div>
+        </div>
+        <div class="col-lg-6 text-center">
+          <img src="logooo.jpeg" alt="Instalaciones TAQ" class="img-fluid rounded-4 shadow-lg"
+            style="max-height: 400px; width: 100%; object-fit: cover;">
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- Footer -->
-<footer class="pt-5 pb-4">
-  <div class="container">
-    <div class="row gy-4">
-      <div class="col-md-4">
-        <h4 class="fw-bold text-white">TAQ<span class="fw-light text-white-50"> Distribuciones</span></h4>
-        <p class="text-white-70 small">Distribuidores autorizados de Nestlé, brindando soluciones comerciales con puntualidad y garantía.</p>
-        <div class="d-flex gap-3">
-          <a href="#" class="text-white-50" aria-label="Facebook"><i class="bi bi-facebook fs-5"></i></a>
+  <!-- Misión, Visión y Compromiso -->
+  <section class="py-5 bg-white">
+    <div class="container py-4">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="value-card p-4 h-100 border">
+            <div class="icon-box bg-danger bg-opacity-10 text-danger mb-4">
+              <i class="bi bi-bullseye"></i>
+            </div>
+            <h4 class="fw-bold mb-3">Nuestra Misión</h4>
+            <p class="text-secondary mb-0">Ser la solución logística y comercial preferida por comercios, supermercados
+              y mayoristas, proporcionando productos alimenticios e ingredientes de la más alta calidad con entregas
+              puntuales y transparentes.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="value-card p-4 h-100 border">
+            <div class="icon-box bg-primary bg-opacity-10 text-primary mb-4">
+              <i class="bi bi-eye"></i>
+            </div>
+            <h4 class="fw-bold mb-3">Nuestra Visión</h4>
+            <p class="text-secondary mb-0">Consolidarnos como el distribuidor autorizado líder en la región central del
+              país, expandiendo continuamente nuestras rutas y adaptándonos a las exigencias de un mercado moderno y
+              dinámico.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="value-card p-4 h-100 border">
+            <div class="icon-box bg-success bg-opacity-10 text-success mb-4">
+              <i class="bi bi-shield-check"></i>
+            </div>
+            <h4 class="fw-bold mb-3">Garantía de Calidad</h4>
+            <p class="text-secondary mb-0">Cada lote de productos Nestlé que pasa por nuestros almacenes es manejado
+              bajo rigurosos controles de almacenamiento, rotación de inventarios (FIFO) y fechas de caducidad
+              certificadas.</p>
+          </div>
         </div>
       </div>
-      <div class="col-md-4">
-        <h6 class="fw-semibold text-white">Enlaces rápidos</h6>
-        <ul class="list-unstyled">
-          <li><a href="index.html" class="text-white-50 text-decoration-none small">Inicio</a></li>
-          <li><a href="catalogo.html" class="text-white-50 text-decoration-none small">Catálogo</a></li>
-          <li><a href="nosotros.html" class="text-white-50 text-decoration-none small">Nosotros</a></li>
-          <li><a href="contacto.html" class="text-white-50 text-decoration-none small">Contacto</a></li>
-        </ul>
-      </div>
-      <div class="col-md-4">
-        <h6 class="fw-semibold text-white">Legales & Contacto</h6>
-        <p class="small text-white-50">Correo: ventas@distribuidorataq.com<br>TAQ Comercializadora © 2026 <br>Todos los derechos reservados.</p>
+    </div>
+  </section>
+
+  <!-- Estadísticas / Indicadores -->
+  <section class="py-5 bg-white">
+    <div class="container py-4">
+      <div class="row g-4 text-center">
+        <div class="col-6 col-lg-3">
+          <div class="stat-card">
+            <h2 class="display-4 fw-bold text-warning mb-1">+10</h2>
+            <p class="mb-0 text-white-50">Años de Experiencia</p>
+          </div>
+        </div>
+        <div class="col-6 col-lg-3">
+          <div class="stat-card">
+            <h2 class="display-4 fw-bold text-info mb-1">+100</h2>
+            <p class="mb-0 text-white-50">Clientes Satisfechos</p>
+          </div>
+        </div>
+        <div class="col-6 col-lg-3">
+          <div class="stat-card">
+            <h2 class="display-4 fw-bold text-success mb-1">99.8%</h2>
+            <p class="mb-0 text-white-50">Entregas a Tiempo</p>
+          </div>
+        </div>
+        <div class="col-6 col-lg-3">
+          <div class="stat-card">
+            <h2 class="display-4 fw-bold text-danger mb-1">100%</h2>
+            <p class="mb-0 text-white-50">Garantía de Origen</p>
+          </div>
+        </div>
       </div>
     </div>
-    <hr class="opacity-25">
-    <div class="text-center small text-white-50">TAQ | Todos los derechos reservados © 2026</div>
-  </div>
-</footer>
+  </section>
 
-<!-- Botón flotante de WhatsApp -->
-<a href="https://wa.me/527716774014?text=Hola%20TAQ%2C%20me%20gustar%C3%ADa%20saber%20m%C3%A1s%20sobre%20su%20empresa" class="btn-whatsapp-fixed" target="_blank" rel="noopener noreferrer">
-  <i class="bi bi-whatsapp"></i>
-</a>
+  <!-- Distribuidores Oficiales Nestlé -->
+  <section class="py-5 bg-light border-top">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <span class="badge bg-danger text-white rounded-pill px-3 py-2 mb-3">Aliados de Confianza</span>
+          <h2 class="fw-bold mb-3">Respaldo directo de la marca número uno</h2>
+          <p class="text-secondary mb-4">Trabajar de la mano con las plantas de producción de Nestlé nos permite ofrecer
+            precios de primera mano, acceso a lanzamientos exclusivos y volumen garantizado en temporadas altas.</p>
+          <ul class="list-unstyled d-flex flex-column gap-2 mb-4">
+            <li class="d-flex align-items-center gap-2"><i class="bi bi-check-circle-fill text-success fs-5"></i>
+              <span>Facturación directa con requisitos fiscales completos</span></li>
+            <li class="d-flex align-items-center gap-2"><i class="bi bi-check-circle-fill text-success fs-5"></i>
+              <span>Descuentos escalonados según volumen de pedido</span></li>
+            <li class="d-flex align-items-center gap-2"><i class="bi bi-check-circle-fill text-success fs-5"></i>
+              <span>Asesoría comercial personalizada para cada tipo de negocio</span></li>
+          </ul>
+          <a href="contacto.html" class="btn btn-dark rounded-pill px-4 py-2">Hablar con un Asesor</a>
+        </div>
+        <div class="col-lg-6">
+          <div
+            class="bg-white p-5 rounded-4 shadow-sm text-center border h-100 d-flex flex-column align-items-center justify-content-center">
+            <i class="bi bi-cup-hot-fill fs-1 text-danger mb-3"></i>
+            <h4 class="fw-bold text-danger mb-2">Nestlé Professional</h4>
+            <p class="text-muted mb-0">Distribución oficial de la amplia gama Nestlé: Nescafé, Coffee-mate, La Lechera,
+              Maggi, Crosse & Blackwell, Chocolates y Cereales.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Footer -->
+  <footer class="pt-5 pb-4">
+    <div class="container">
+      <div class="row gy-4">
+        <div class="col-md-4">
+          <h4 class="fw-bold text-white">TAQ<span class="fw-light text-white-50"> Distribuciones</span></h4>
+          <p class="text-white-70 small">Distribuidores autorizados de Nestlé, brindando soluciones comerciales con
+            puntualidad y garantía.</p>
+          <div class="d-flex gap-3">
+            <a href="#" class="text-white-50" aria-label="Facebook"><i class="bi bi-facebook fs-5"></i></a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <h6 class="fw-semibold text-white">Enlaces rápidos</h6>
+          <ul class="list-unstyled">
+            <li><a href="index.html" class="text-white-50 text-decoration-none small">Inicio</a></li>
+            <li><a href="catalogo.html" class="text-white-50 text-decoration-none small">Catálogo</a></li>
+            <li><a href="nosotros.html" class="text-white-50 text-decoration-none small">Nosotros</a></li>
+            <li><a href="contacto.html" class="text-white-50 text-decoration-none small">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h6 class="fw-semibold text-white">Legales & Contacto</h6>
+          <p class="small text-white-50">Correo: ventas@distribuidorataq.com<br>TAQ Comercializadora © 2026 <br>Todos
+            los derechos reservados.</p>
+        </div>
+      </div>
+      <hr class="opacity-25">
+      <div class="text-center small text-white-50">TAQ | Todos los derechos reservados © 2026</div>
+    </div>
+  </footer>
+
+  <!-- Botón flotante de WhatsApp -->
+  <a href="https://wa.me/527716774014?text=Hola%20TAQ%2C%20me%20gustar%C3%ADa%20saber%20m%C3%A1s%20sobre%20su%20empresa"
+    class="btn-whatsapp-fixed" target="_blank" rel="noopener noreferrer">
+    <i class="bi bi-whatsapp"></i>
+  </a>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>

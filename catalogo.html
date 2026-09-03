@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
@@ -8,18 +9,34 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <!-- Google Fonts: Inter -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap"
+    rel="stylesheet">
   <style>
-    * { font-family: 'Inter', sans-serif; }
-    body { background-color: #fefefe; scroll-behavior: smooth; }
-    .navbar { box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05); }
+    * {
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background-color: #fefefe;
+      scroll-behavior: smooth;
+    }
+
+    .navbar {
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+    }
+
     .hero-catalog {
       background: linear-gradient(135deg, #0a2b3e 0%, #173e54 100%);
       color: white;
-      border-bottom: 1px solid rgba(255,255,255,0.1);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
-    .brand-logo-text { font-weight: 800; letter-spacing: -0.5px; }
-    
+
+    .brand-logo-text {
+      font-weight: 800;
+      letter-spacing: -0.5px;
+    }
+
     /* Botón flotante WhatsApp */
     .btn-whatsapp-fixed {
       position: fixed;
@@ -34,11 +51,12 @@
       align-items: center;
       justify-content: center;
       font-size: 32px;
-      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
       transition: all 0.2s ease-in-out;
       z-index: 1040;
       text-decoration: none;
     }
+
     .btn-whatsapp-fixed:hover {
       background-color: #20b859;
       transform: scale(1.07);
@@ -59,16 +77,18 @@
       align-items: center;
       justify-content: center;
       font-size: 26px;
-      box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
       transition: all 0.2s ease-in-out;
       z-index: 1040;
       border: 2px solid white;
     }
+
     .btn-cart-fixed:hover {
       background-color: #173e54;
       transform: scale(1.07);
       color: white;
     }
+
     .cart-badge {
       position: absolute;
       top: -4px;
@@ -91,13 +111,15 @@
       border: none;
       border-radius: 1.5rem;
       transition: transform 0.25s ease, box-shadow 0.25s ease;
-      box-shadow: 0 10px 25px -8px rgba(0,0,0,0.08);
+      box-shadow: 0 10px 25px -8px rgba(0, 0, 0, 0.08);
       background: #ffffff;
     }
+
     .card-prod:hover {
       transform: translateY(-6px);
-      box-shadow: 0 20px 35px -10px rgba(0,0,0,0.14);
+      box-shadow: 0 20px 35px -10px rgba(0, 0, 0, 0.14);
     }
+
     .card-prod img {
       border-top-left-radius: 1.5rem;
       border-top-right-radius: 1.5rem;
@@ -107,6 +129,7 @@
       background-color: #f8f9fa;
       width: 100%;
     }
+
     .sku-badge {
       font-size: 0.75rem;
       background: #eef2f7;
@@ -126,369 +149,409 @@
       color: #495057;
       transition: all 0.2s;
     }
-    .filter-btn:hover, .filter-btn.active {
+
+    .filter-btn:hover,
+    .filter-btn.active {
       background-color: #0a2b3e;
       color: white;
       border-color: #0a2b3e;
       box-shadow: 0 4px 12px rgba(10, 43, 62, 0.2);
     }
+
     .search-box {
       border-radius: 50px;
       padding: 12px 24px;
       border: 2px solid #e2e8f0;
     }
+
     .search-box:focus {
       border-color: #0a2b3e;
       box-shadow: 0 0 0 0.25rem rgba(10, 43, 62, 0.15);
     }
-    footer { background-color: #0a2b3e; color: #e0e7ed; }
-    .badge-nestle { background-color: rgba(194, 43, 43, 0.12); color: #C22B2B; }
+
+    footer {
+      background-color: #0a2b3e;
+      color: #e0e7ed;
+    }
+
+    .badge-nestle {
+      background-color: rgba(194, 43, 43, 0.12);
+      color: #C22B2B;
+    }
 
     @media (max-width: 768px) {
-      .btn-whatsapp-fixed { width: 52px; height: 52px; font-size: 26px; bottom: 20px; right: 20px; }
-      .btn-cart-fixed { width: 52px; height: 52px; font-size: 22px; bottom: 85px; right: 20px; }
+      .btn-whatsapp-fixed {
+        width: 52px;
+        height: 52px;
+        font-size: 26px;
+        bottom: 20px;
+        right: 20px;
+      }
+
+      .btn-cart-fixed {
+        width: 52px;
+        height: 52px;
+        font-size: 22px;
+        bottom: 85px;
+        right: 20px;
+      }
     }
   </style>
 </head>
+
 <body>
 
-<!-- Navegación -->
-<nav class="navbar navbar-expand-lg bg-white py-3 sticky-top">
-  <div class="container">
-    <a class="navbar-brand fw-bold fs-4" href="index.html">
-      <span class="brand-logo-text text-dark">TAQ</span> <span class="fw-normal text-secondary">| Distribuidora</span>
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarMain">
-      <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-2">
-        <li class="nav-item"><a class="nav-link fw-semibold" href="index.html">Inicio</a></li>
-        <li class="nav-item"><a class="nav-link fw-semibold active text-danger" href="catalogo.html">Catálogo</a></li>
-        <li class="nav-item"><a class="nav-link fw-semibold" href="nosotros.html">Nosotros</a></li>
-        <li class="nav-item"><a class="nav-link fw-semibold" href="contacto.html">Contacto</a></li>
-      </ul>
-      
-      <!-- Botón del Carrito en Navbar -->
-      <button class="btn btn-outline-dark rounded-pill ms-lg-3 px-4 position-relative" data-bs-toggle="offcanvas" data-bs-target="#cartOffcanvas">
-        <i class="bi bi-cart3 me-1"></i> Carrito
-        <span class="badge bg-danger rounded-pill ms-1" id="navCartCount">0</span>
+  <!-- Navegación -->
+  <nav class="navbar navbar-expand-lg bg-white py-3 sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold fs-4" href="index.html">
+        <span class="brand-logo-text text-dark">TAQ</span> <span class="fw-normal text-secondary">| Distribuidora</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain">
+        <span class="navbar-toggler-icon"></span>
       </button>
-    </div>
-  </div>
-</nav>
-
-<!-- Header de Catálogo -->
-<section class="hero-catalog py-5">
-  <div class="container py-3 text-center">
-    <span class="badge bg-danger text-white rounded-pill px-3 py-2 mb-3 fw-semibold"><i class="bi bi-box-seam-fill"></i> Catálogo Oficial Nestlé Professional</span>
-    <h1 class="display-5 fw-bold mb-3">Catálogo de Productos TAQ</h1>
-    <p class="lead opacity-75 mx-auto" style="max-width: 700px;">Selecciona tus productos, agrégalos al carrito de cotización y envía tu lista directamente a nuestro WhatsApp oficial (771 677 4014).</p>
-  </div>
-</section>
-
-<!-- Buscador y Filtros -->
-<section class="py-4 bg-light border-bottom">
-  <div class="container">
-    <div class="row align-items-center g-3">
-      <div class="col-md-5 col-lg-4">
-        <div class="input-group">
-          <span class="input-group-text bg-white border-end-0 rounded-start-pill ps-3"><i class="bi bi-search text-muted"></i></span>
-          <input type="text" id="searchInput" class="form-control search-box border-start-0 rounded-end-pill ps-0" placeholder="Buscar por producto, clave o marca..." aria-label="Buscar producto">
-        </div>
-      </div>
-      <div class="col-md-7 col-lg-8">
-        <div class="d-flex flex-wrap gap-2 justify-content-md-end" id="filterPills">
-          <button class="filter-btn active" data-filter="all">Todos</button>
-          <button class="filter-btn" data-filter="culinarios">Culinarios & Salsas</button>
-          <button class="filter-btn" data-filter="lacteos">Lácteos & Repostería</button>
-          <button class="filter-btn" data-filter="chocolates">Chocolates</button>
-          <button class="filter-btn" data-filter="nescafe">Nescafé & Bebidas</button>
-          <button class="filter-btn" data-filter="endulzantes">Endulzantes</button>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Grid de Productos -->
-<section class="py-5">
-  <div class="container">
-    <div class="d-flex justify-content-between align-items-center mb-4">
-      <h4 class="fw-bold mb-0">Catálogo de Productos</h4>
-      <span class="text-muted small" id="productCount">Cargando productos...</span>
-    </div>
-
-    <div class="row g-4" id="productsGrid">
-      <!-- Los productos se renderizan dinámicamente vía JavaScript con los datos oficiales del PDF -->
-    </div>
-
-    <!-- Mensaje cuando no hay resultados de búsqueda -->
-    <div id="noResults" class="text-center py-5 d-none">
-      <i class="bi bi-search fs-1 text-muted"></i>
-      <h5 class="fw-bold mt-3">No se encontraron productos</h5>
-      <p class="text-muted">Intenta buscar con otros términos o selecciona otra categoría.</p>
-      <button class="btn btn-outline-danger rounded-pill px-4" id="btnResetSearch">Ver todos los productos</button>
-    </div>
-  </div>
-</section>
-
-<!-- Offcanvas Carrito de Cotización -->
-<div class="offcanvas offcanvas-end" tabindex="-1" id="cartOffcanvas" aria-labelledby="cartOffcanvasLabel" style="width: 450px; max-width: 100vw;">
-  <div class="offcanvas-header border-bottom bg-light">
-    <h5 class="offcanvas-title fw-bold" id="cartOffcanvasLabel"><i class="bi bi-cart-check-fill text-danger me-2"></i> Mi Carrito de Cotización</h5>
-    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-  </div>
-  <div class="offcanvas-body d-flex flex-column justify-content-between">
-    
-    <!-- Lista de items del carrito -->
-    <div id="cartItemsList" class="flex-grow-1 overflow-auto pe-1">
-      <!-- Se genera mediante JS -->
-    </div>
-
-    <!-- Formulario de datos para la cotización -->
-    <div class="pt-3 border-top bg-light p-3 rounded-4 mt-3">
-      <h6 class="fw-bold mb-3"><i class="bi bi-person-badge me-1"></i> Datos de entrega (Opcional)</h6>
-      <div class="mb-2">
-        <input type="text" id="cartClientName" class="form-control form-control-sm rounded-pill" placeholder="Tu Nombre / Empresa">
-      </div>
-      <div class="mb-3">
-        <input type="text" id="cartClientCity" class="form-control form-control-sm rounded-pill" placeholder="Ciudad / Municipio de entrega">
-      </div>
-
-      <div class="d-grid gap-2">
-        <button id="btnSendWhatsappCart" class="btn btn-success rounded-pill py-2 fw-semibold">
-          <i class="bi bi-whatsapp me-1"></i> Enviar Lista a WhatsApp (771 677 4014)
-        </button>
-        <button id="btnClearCart" class="btn btn-outline-secondary rounded-pill btn-sm">
-          <i class="bi bi-trash me-1"></i> Vaciar Carrito
-        </button>
-      </div>
-    </div>
-
-  </div>
-</div>
-
-<!-- Footer -->
-<footer class="pt-5 pb-4">
-  <div class="container">
-    <div class="row gy-4">
-      <div class="col-md-4">
-        <h4 class="fw-bold text-white">TAQ<span class="fw-light text-white-50"> Distribuidora</span></h4>
-        <p class="text-white-70 small">Distribuidores autorizados Nestlé Professional. Atención personalizada a mayoristas y comerciantes.</p>
-        <p class="small text-white-50"><i class="bi bi-telephone-fill text-danger me-1"></i> Cotizaciones WhatsApp: <strong>771 677 4014</strong></p>
-        <div class="d-flex gap-3">
-          <a href="#" class="text-white-50" aria-label="Facebook"><i class="bi bi-facebook fs-5"></i></a>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <h6 class="fw-semibold text-white">Enlaces rápidos</h6>
-        <ul class="list-unstyled">
-          <li><a href="index.html" class="text-white-50 text-decoration-none small">Inicio</a></li>
-          <li><a href="catalogo.html" class="text-white-50 text-decoration-none small">Catálogo</a></li>
-          <li><a href="nosotros.html" class="text-white-50 text-decoration-none small">Nosotros</a></li>
-          <li><a href="contacto.html" class="text-white-50 text-decoration-none small">Contacto</a></li>
+      <div class="collapse navbar-collapse" id="navbarMain">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-2">
+          <li class="nav-item"><a class="nav-link fw-semibold" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link fw-semibold active text-danger" href="catalogo.html">Catálogo</a></li>
+          <li class="nav-item"><a class="nav-link fw-semibold" href="nosotros.html">Nosotros</a></li>
+          <li class="nav-item"><a class="nav-link fw-semibold" href="contacto.html">Contacto</a></li>
         </ul>
-      </div>
-      <div class="col-md-4">
-        <h6 class="fw-semibold text-white">Legales & Contacto</h6>
-        <p class="small text-white-50">Correo: ventas@distribuidorataq.com<br>Teléfono / WhatsApp: 771 677 4014<br>© 2026 TAQ Distribuidora. Todos los derechos reservados.</p>
+
+        <!-- Botón del Carrito en Navbar -->
+        <button class="btn btn-outline-dark rounded-pill ms-lg-3 px-4 position-relative" data-bs-toggle="offcanvas"
+          data-bs-target="#cartOffcanvas">
+          <i class="bi bi-cart3 me-1"></i> Carrito
+          <span class="badge bg-danger rounded-pill ms-1" id="navCartCount">0</span>
+        </button>
       </div>
     </div>
-    <hr class="opacity-25">
-    <div class="text-center small text-white-50">TAQ | Todos los derechos reservados © 2026</div>
+  </nav>
+
+  <!-- Header de Catálogo -->
+  <section class="hero-catalog py-5">
+    <div class="container py-3 text-center">
+      <span class="badge bg-danger text-white rounded-pill px-3 py-2 mb-3 fw-semibold"><i
+          class="bi bi-box-seam-fill"></i> Catálogo Oficial Nestlé Professional</span>
+      <h1 class="display-5 fw-bold mb-3">Catálogo de Productos TAQ</h1>
+      <p class="lead opacity-75 mx-auto" style="max-width: 700px;">Selecciona tus productos, agrégalos al carrito de
+        cotización y envía tu lista directamente a nuestro WhatsApp oficial (771 677 4014).</p>
+    </div>
+  </section>
+
+  <!-- Buscador y Filtros -->
+  <section class="py-4 bg-light border-bottom">
+    <div class="container">
+      <div class="row align-items-center g-3">
+        <div class="col-md-5 col-lg-4">
+          <div class="input-group">
+            <span class="input-group-text bg-white border-end-0 rounded-start-pill ps-3"><i
+                class="bi bi-search text-muted"></i></span>
+            <input type="text" id="searchInput" class="form-control search-box border-start-0 rounded-end-pill ps-0"
+              placeholder="Buscar por producto, clave o marca..." aria-label="Buscar producto">
+          </div>
+        </div>
+        <div class="col-md-7 col-lg-8">
+          <div class="d-flex flex-wrap gap-2 justify-content-md-end" id="filterPills">
+            <button class="filter-btn active" data-filter="all">Todos</button>
+            <button class="filter-btn" data-filter="culinarios">Culinarios & Salsas</button>
+            <button class="filter-btn" data-filter="lacteos">Lácteos & Repostería</button>
+            <button class="filter-btn" data-filter="chocolates">Chocolates</button>
+            <button class="filter-btn" data-filter="nescafe">Nescafé & Bebidas</button>
+            <button class="filter-btn" data-filter="endulzantes">Endulzantes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Grid de Productos -->
+  <section class="py-5">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-center mb-4">
+        <h4 class="fw-bold mb-0">Catálogo de Productos</h4>
+        <span class="text-muted small" id="productCount">Cargando productos...</span>
+      </div>
+
+      <div class="row g-4" id="productsGrid">
+        <!-- Los productos se renderizan dinámicamente vía JavaScript con los datos oficiales del PDF -->
+      </div>
+
+      <!-- Mensaje cuando no hay resultados de búsqueda -->
+      <div id="noResults" class="text-center py-5 d-none">
+        <i class="bi bi-search fs-1 text-muted"></i>
+        <h5 class="fw-bold mt-3">No se encontraron productos</h5>
+        <p class="text-muted">Intenta buscar con otros términos o selecciona otra categoría.</p>
+        <button class="btn btn-outline-danger rounded-pill px-4" id="btnResetSearch">Ver todos los productos</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Offcanvas Carrito de Cotización -->
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="cartOffcanvas" aria-labelledby="cartOffcanvasLabel"
+    style="width: 450px; max-width: 100vw;">
+    <div class="offcanvas-header border-bottom bg-light">
+      <h5 class="offcanvas-title fw-bold" id="cartOffcanvasLabel"><i class="bi bi-cart-check-fill text-danger me-2"></i>
+        Mi Carrito de Cotización</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body d-flex flex-column justify-content-between">
+
+      <!-- Lista de items del carrito -->
+      <div id="cartItemsList" class="flex-grow-1 overflow-auto pe-1">
+        <!-- Se genera mediante JS -->
+      </div>
+
+      <!-- Formulario de datos para la cotización -->
+      <div class="pt-3 border-top bg-light p-3 rounded-4 mt-3">
+        <h6 class="fw-bold mb-3"><i class="bi bi-person-badge me-1"></i> Datos de entrega (Opcional)</h6>
+        <div class="mb-2">
+          <input type="text" id="cartClientName" class="form-control form-control-sm rounded-pill"
+            placeholder="Tu Nombre / Empresa">
+        </div>
+        <div class="mb-3">
+          <input type="text" id="cartClientCity" class="form-control form-control-sm rounded-pill"
+            placeholder="Ciudad / Municipio de entrega">
+        </div>
+
+        <div class="d-grid gap-2">
+          <button id="btnSendWhatsappCart" class="btn btn-success rounded-pill py-2 fw-semibold">
+            <i class="bi bi-whatsapp me-1"></i> Enviar Lista a WhatsApp (771 677 4014)
+          </button>
+          <button id="btnClearCart" class="btn btn-outline-secondary rounded-pill btn-sm">
+            <i class="bi bi-trash me-1"></i> Vaciar Carrito
+          </button>
+        </div>
+      </div>
+
+    </div>
   </div>
-</footer>
 
-<!-- Botón flotante Carrito -->
-<button class="btn-cart-fixed" data-bs-toggle="offcanvas" data-bs-target="#cartOffcanvas" title="Ver Carrito">
-  <i class="bi bi-cart3"></i>
-  <span class="cart-badge" id="floatingCartCount">0</span>
-</button>
+  <!-- Footer -->
+  <footer class="pt-5 pb-4">
+    <div class="container">
+      <div class="row gy-4">
+        <div class="col-md-4">
+          <h4 class="fw-bold text-white">TAQ<span class="fw-light text-white-50"> Distribuidora</span></h4>
+          <p class="text-white-70 small">Distribuidores autorizados Nestlé Professional. Atención personalizada a
+            mayoristas y comerciantes.</p>
+          <p class="small text-white-50"><i class="bi bi-telephone-fill text-danger me-1"></i> Cotizaciones WhatsApp:
+            <strong>771 677 4014</strong>
+          </p>
+          <div class="d-flex gap-3">
+            <a href="#" class="text-white-50" aria-label="Facebook"><i class="bi bi-facebook fs-5"></i></a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <h6 class="fw-semibold text-white">Enlaces rápidos</h6>
+          <ul class="list-unstyled">
+            <li><a href="index.html" class="text-white-50 text-decoration-none small">Inicio</a></li>
+            <li><a href="catalogo.html" class="text-white-50 text-decoration-none small">Catálogo</a></li>
+            <li><a href="nosotros.html" class="text-white-50 text-decoration-none small">Nosotros</a></li>
+            <li><a href="contacto.html" class="text-white-50 text-decoration-none small">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h6 class="fw-semibold text-white">Legales & Contacto</h6>
+          <p class="small text-white-50">Correo: ventas@distribuidorataq.com<br>Teléfono / WhatsApp: 771 677 4014<br>©
+            2026 TAQ Distribuidora. Todos los derechos reservados.</p>
+        </div>
+      </div>
+      <hr class="opacity-25">
+      <div class="text-center small text-white-50">TAQ | Todos los derechos reservados © 2026</div>
+    </div>
+  </footer>
 
-<!-- Botón flotante de WhatsApp Directo -->
-<a href="https://wa.me/527716774014?text=Hola%20TAQ%2C%20me%20interesa%20informaci%C3%B3n%20sobre%20sus%20productos%20del%20cat%C3%A1logo" class="btn-whatsapp-fixed" target="_blank" rel="noopener noreferrer" title="WhatsApp 7716774014">
-  <i class="bi bi-whatsapp"></i>
-</a>
+  <!-- Botón flotante Carrito -->
+  <button class="btn-cart-fixed" data-bs-toggle="offcanvas" data-bs-target="#cartOffcanvas" title="Ver Carrito">
+    <i class="bi bi-cart3"></i>
+    <span class="cart-badge" id="floatingCartCount">0</span>
+  </button>
 
-<!-- Scripts Bootstrap + Lógica del Carrito y productos PDF -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Botón flotante de WhatsApp Directo -->
+  <a href="https://wa.me/527716774014?text=Hola%20TAQ%2C%20me%20interesa%20informaci%C3%B3n%20sobre%20sus%20productos%20del%20cat%C3%A1logo"
+    class="btn-whatsapp-fixed" target="_blank" rel="noopener noreferrer" title="WhatsApp 7716774014">
+    <i class="bi bi-whatsapp"></i>
+  </a>
 
-<script>
-  // Productos oficiales (Lista Actualizada Enero 2026 - 52 Productos)
-  const productsData = [
-    // --- ENDULZANTES ---
-    { id: "12359495", name: "SPLENDA® Sobre 2kg N1 MX (2,000 Sobres)", brand: "Nestlé", category: "endulzantes", format: "Caja con 2,000 sobres de 1 g c/u (2kg)", clave: "12359495", desc: "Edulcorante de mesa en sobres de 1g presentación masiva.", img: "img/splenda2000.webp" },
-    { id: "12036071", name: "SPLENDA® Sobres 700x1g N1 MX", brand: "Nestlé", category: "endulzantes", format: "Caja con 700 sobres de 1 g c/u", clave: "12036071", desc: "Edulcorante de mesa en sobres de 1g.", img: "img/700.png" },
-    { id: "12406487", name: "SPLENDA® Natural's Sobre 400x1g", brand: "Nestlé", category: "endulzantes", format: "Caja con 400 sobres de 1 g c/u", clave: "12406487", desc: "Edulcorante de mesa sabor stevia.", img: "img/stevia400.png" },
+  <!-- Scripts Bootstrap + Lógica del Carrito y productos PDF -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 
-    // --- LÁCTEOS & REPOSTERÍA ---
-    { id: "8500067", name: "NESTLÉ® CEREVITA Leche Entera en Polvo 35kg", brand: "Nestlé", category: "lacteos", format: "Saco con 35 kg", clave: "8500067", desc: "Leche entera en polvo adicionada con vitaminas.", img: "img/polvo35.png" },
-    { id: "8500078", name: "NESTLÉ® NIDO Leche Instantánea 10kg", brand: "Nestlé", category: "lacteos", format: "Caja con 10 kg", clave: "8500078", desc: "Leche entera en polvo instantánea.", img: "img/lechepolvo10.png" },
-    { id: "12140454", name: "CARNATION® Leche Evaporada 12x1kg MX", brand: "Nestlé", category: "lacteos", format: "Caja con 12 x 1 kg", clave: "12140454", desc: "Leche evaporada cremosa para uso gastronómico.", img: "img/evaporada1kg.webp" },
-    { id: "12610012", name: "CARNATION® Leche Evaporada Lata AF 48x360g MX", brand: "Nestlé", category: "lacteos", format: "Caja con 48 latas de 360 g", clave: "12610012", desc: "Leche evaporada tradicional en lata.", img: "img/evaporada1kg.webp" },
-    { id: "12610013", name: "NESTLÉ® Media Crema 24x225g MX", brand: "Nestlé", category: "lacteos", format: "Caja con 24 latas de 225 g", clave: "12610013", desc: "Media crema en lata de porción práctica.", img: "img/mediacrema1.webp" },
-    { id: "12393464", name: "NESTLÉ® MEDIA CREMA Cmbk 12x1L MX", brand: "Nestlé", category: "lacteos", format: "Caja con 12 x 1 L", clave: "12393464", desc: "Doble consistencia para platillos salados y postres.", img: "img/mediacrema1.webp" },
-    { id: "12577403", name: "CARLOS V® Crema p/ Batir 12x1.13kg MX", brand: "Nestlé", category: "lacteos", format: "Caja con 12 x 1.13 kg", clave: "12577403", desc: "Crema para batir sabor chocolate Carlos V®.", img: "img/carlosbatir1.webp" },
-    { id: "12610014", name: "LA LECHERA® LCA Botella Squeeze 18x335g MX", brand: "Nestlé", category: "lacteos", format: "Caja con 18 botellas Squeeze x 335 g", clave: "12610014", desc: "Leche condensada en envase dosificador práctico.", img: "img/lecheramanga.webp" },
-    { id: "12610015", name: "LA LECHERA® LCA Lata 48x375g MX", brand: "Nestlé", category: "lacteos", format: "Caja con 48 latas de 375 g", clave: "12610015", desc: "Leche condensada en lata tradicional.", img: "img/lechera45.png" },
-    { id: "12610020", name: "LA LECHERA® LCA Bolsa 20x209g MX", brand: "Nestlé", category: "lacteos", format: "Caja con 20 bolsas de 209 g", clave: "12610020", desc: "Leche condensada azucarada en bolsa.", img: "img/lecheramanga.webp" },
-    { id: "12568179", name: "LA LECHERA® Original Spread 8x1kg MX", brand: "Nestlé", category: "lacteos", format: "Caja de 8 mangas x 1 kg", clave: "12568179", desc: "Formato práctico en manga decoradora para repostería.", img: "img/lecheramanga.webp" },
-    { id: "12308903", name: "LA LECHERA® Tres Leches 12x1kg N1 MX", brand: "Nestlé", category: "lacteos", format: "Caja con 12 x 1 kg", clave: "12308903", desc: "Mezcla para pasteles tres leches.", img: "img/lechera3leches1l.png" },
-    { id: "12568200", name: "LA LECHERA® Dulce De Leche Untado 8x1kg MX", brand: "Nestlé", category: "lacteos", format: "Caja de 8 mangas x 1 kg", clave: "12568200", desc: "Dulce de leche en manga decoradora.", img: "img/dulcemanga.webp" },
-    { id: "12385848", name: "LA LECHERA® Dulce De Leche Untado 4x4.5kg MX", brand: "Nestlé", category: "lacteos", format: "Caja con 4 x 4.5 kg", clave: "12385848", desc: "Dulce de leche cremoso para panadería.", img: "img/dulceleche45.png" },
-    { id: "12383025", name: "LA LECHERA® Institucional 25.5kg MX", brand: "Nestlé", category: "lacteos", format: "Cubeta con 25.5 kg", clave: "12383025", desc: "Leche condensada 100% de vaca en formato gigante.", img: "img/lechera45.png" },
+  <script>
+    // Productos oficiales (Lista Actualizada Enero 2026 - 52 Productos)
+    const productsData = [
+      // --- ENDULZANTES ---
+      { id: "12359495", name: "SPLENDA® Sobre 2kg N1 MX (2,000 Sobres)", brand: "Nestlé", category: "endulzantes", format: "Caja con 2,000 sobres de 1 g c/u (2kg)", clave: "12359495", desc: "Edulcorante de mesa en sobres de 1g presentación masiva.", img: "img/splenda2000.webp" },
+      { id: "12036071", name: "SPLENDA® Sobres 700x1g N1 MX", brand: "Nestlé", category: "endulzantes", format: "Caja con 700 sobres de 1 g c/u", clave: "12036071", desc: "Edulcorante de mesa en sobres de 1g.", img: "img/700.png" },
+      { id: "12406487", name: "SPLENDA® Natural's Sobre 400x1g", brand: "Nestlé", category: "endulzantes", format: "Caja con 400 sobres de 1 g c/u", clave: "12406487", desc: "Edulcorante de mesa sabor stevia.", img: "img/stevia400.png" },
 
-    // --- NESCAFÉ & BEBIDAS ---
-    { id: "12610001", name: "NESCAFÉ® CLÁSICO® Dawn Jar MYW 12x200g MX", brand: "Nestlé", category: "nescafe", format: "Caja con 12 frascos x 200 g", clave: "12610001", desc: "Café 100% soluble en frasco de vidrio.", img: "img/cafebolsa400.webp" },
-    { id: "12610002", name: "NESCAFÉ® CLÁSICO® MYW 16x42g MX", brand: "Nestlé", category: "nescafe", format: "Caja con 16 frascos x 42 g", clave: "12610002", desc: "Café soluble instantáneo presentación compacta.", img: "img/clasico50.png" },
-    { id: "12221711", name: "NESCAFÉ® CLÁSICO® Npro Lata 4x1kg MX", brand: "Nestlé", category: "nescafe", format: "Charola con 4 latas de 1 kg", clave: "12221711", desc: "Café 100% soluble. Rinde 500 tazas por lata.", img: "img/lata1kg.jpg" },
-    { id: "8503097", name: "NESCAFÉ® CLÁSICO® Stick 18(50x2g) MX", brand: "Nestlé", category: "nescafe", format: "Caja con 18 estuches de 50 sticks", clave: "8503097", desc: "Sobres individuales de 2g.", img: "img/clasico50.png" },
-    { id: "12610003", name: "NESCAFÉ® CLÁSICO® Stick MYW MP6(16x14g) MX", brand: "Nestlé", category: "nescafe", format: "Caja con 6 paquetes (16 sticks x 14g)", clave: "12610003", desc: "Sticks de café soluble porción individual.", img: "img/clasico50.png" },
-    { id: "12610004", name: "NESCAFÉ® CLÁSICO® MYW 12x120g MX", brand: "Nestlé", category: "nescafe", format: "Caja con 12 frascos x 120 g", clave: "12610004", desc: "Café soluble instantáneo rinde múltiples tazas.", img: "img/cafebolsa400.webp" },
-    { id: "8500297", name: "NESCAFÉ® CLÁSICO® 5kg MX", brand: "Nestlé", category: "nescafe", format: "Caja con 1 bolsa de 5 kg", clave: "8500297", desc: "Formato gigante para dispensadores.", img: "img/5kg.webp" },
-    { id: "12577170", name: "CFMT Orig Stick Chronos Fs 6(200x4g) MX", brand: "Nestlé", category: "nescafe", format: "Caja con 6 estuches con 200 sticks de 4g", clave: "12577170", desc: "Sticks individuales de sustituto de crema Coffee-Mate®.", img: "img/cofemate.webp" },
-    { id: "12610007", name: "COFFEE-MATE® Original 12x311g N1 MX", brand: "Nestlé", category: "nescafe", format: "Caja con 12 botes x 311 g", clave: "12610007", desc: "Sustituto de crema en polvo sabor original.", img: "img/cofemate.webp" },
-    { id: "12610008", name: "COFFEE-MATE® Original Botella 12x400g N1 MX", brand: "Nestlé", category: "nescafe", format: "Caja con 12 botellas x 400 g", clave: "12610008", desc: "Sustituto de crema en botella plástica.", img: "img/cofemate.webp" },
-    { id: "12610009", name: "COFFEE-MATE® Original Lata 6x1.2kg N2 MX", brand: "Nestlé", category: "nescafe", format: "Charola con 6 latas de 1.2 kg", clave: "12610009", desc: "Sustituto de crema en lata rendidora.", img: "img/cremacafe225.png" },
-    { id: "12610010", name: "COFFEE-MATE® Regular Botella 12x160g N1 MX", brand: "Nestlé", category: "nescafe", format: "Caja con 12 botellas x 160 g", clave: "12610010", desc: "Sustituto de crema en polvo tamaño compacto.", img: "img/cofemate.webp" },
-    { id: "12535076", name: "NESQUIK® Chocolate Polvo Cuñete 5kg", brand: "Nestlé", category: "nescafe", format: "Caja/Cuñete de 5 kg", clave: "12535076", desc: "Polvo para bebida sabor chocolate.", img: "img/polvo5kg.webp" },
+      // --- LÁCTEOS & REPOSTERÍA ---
+      { id: "8500067", name: "NESTLÉ® CEREVITA Leche Entera en Polvo 35kg", brand: "Nestlé", category: "lacteos", format: "Saco con 35 kg", clave: "8500067", desc: "Leche entera en polvo adicionada con vitaminas.", img: "img/polvo35.png" },
+      { id: "8500078", name: "NESTLÉ® NIDO Leche Instantánea 10kg", brand: "Nestlé", category: "lacteos", format: "Caja con 10 kg", clave: "8500078", desc: "Leche entera en polvo instantánea.", img: "img/lechepolvo10.png" },
+      { id: "12140454", name: "CARNATION® Leche Evaporada 12x1kg MX", brand: "Nestlé", category: "lacteos", format: "Caja con 12 x 1 kg", clave: "12140454", desc: "Leche evaporada cremosa para uso gastronómico.", img: "img/evaporada1kg.webp" },
+      { id: "12610012", name: "CARNATION® Leche Evaporada Lata AF 48x360g MX", brand: "Nestlé", category: "lacteos", format: "Caja con 48 latas de 360 g", clave: "12610012", desc: "Leche evaporada tradicional en lata.", img: "img/carnation360gm.webp" },
+      { id: "12610013", name: "NESTLÉ® Media Crema 24x225g MX", brand: "Nestlé", category: "lacteos", format: "Caja con 24 latas de 225 g", clave: "12610013", desc: "Media crema en lata de porción práctica.", img: "img/mediacrema225gm.webp" },
+      { id: "12393464", name: "NESTLÉ® MEDIA CREMA Cmbk 12x1L MX", brand: "Nestlé", category: "lacteos", format: "Caja con 12 x 1 L", clave: "12393464", desc: "Doble consistencia para platillos salados y postres.", img: "img/mediacrema1.webp" },
+      { id: "12577403", name: "CARLOS V® Crema p/ Batir 12x1.13kg MX", brand: "Nestlé", category: "lacteos", format: "Caja con 12 x 1.13 kg", clave: "12577403", desc: "Crema para batir sabor chocolate Carlos V®.", img: "img/carlosbatir1.webp" },
+      { id: "12610014", name: "LA LECHERA® LCA Botella Squeeze 18x335g MX", brand: "Nestlé", category: "lacteos", format: "Caja con 18 botellas Squeeze x 335 g", clave: "12610014", desc: "Leche condensada en envase dosificador práctico.", img: "img/lecheramanga.webp" },
+      { id: "12610015", name: "LA LECHERA® LCA Lata 48x375g MX", brand: "Nestlé", category: "lacteos", format: "Caja con 48 latas de 375 g", clave: "12610015", desc: "Leche condensada en lata tradicional.", img: "img/lecheralata375g.webp" },
+      { id: "12610020", name: "LA LECHERA® LCA Bolsa 20x209g MX", brand: "Nestlé", category: "lacteos", format: "Caja con 20 bolsas de 209 g", clave: "12610020", desc: "Leche condensada azucarada en bolsa.", img: "img/lecheramanga.webp" },
+      { id: "12568179", name: "LA LECHERA® Original Spread 8x1kg MX", brand: "Nestlé", category: "lacteos", format: "Caja de 8 mangas x 1 kg", clave: "12568179", desc: "Formato práctico en manga decoradora para repostería.", img: "img/lecheramanga.webp" },
+      { id: "12308903", name: "LA LECHERA® Tres Leches 12x1kg N1 MX", brand: "Nestlé", category: "lacteos", format: "Caja con 12 x 1 kg", clave: "12308903", desc: "Mezcla para pasteles tres leches.", img: "img/lechera3leches1l.png" },
+      { id: "12568200", name: "LA LECHERA® Dulce De Leche Untado 8x1kg MX", brand: "Nestlé", category: "lacteos", format: "Caja de 8 mangas x 1 kg", clave: "12568200", desc: "Dulce de leche en manga decoradora.", img: "img/dulcemanga.webp" },
+      { id: "12385848", name: "LA LECHERA® Dulce De Leche Untado 4x4.5kg MX", brand: "Nestlé", category: "lacteos", format: "Caja con 4 x 4.5 kg", clave: "12385848", desc: "Dulce de leche cremoso para panadería.", img: "img/dulceleche45.png" },
+      { id: "12383025", name: "LA LECHERA® Institucional 25.5kg MX", brand: "Nestlé", category: "lacteos", format: "Cubeta con 25.5 kg", clave: "12383025", desc: "Leche condensada 100% de vaca en formato gigante.", img: "img/lechera45.png" },
 
-    // --- CULINARIOS ---
-    { id: "12479580", name: "MAGGI® Jugo Sazonador 24x100ml MX", brand: "Nestlé", category: "culinarios", format: "Charola con 24 x 100 ml", clave: "12479580", desc: "Sazonador líquido concentrado para carnes, sopas y botanas.", img: "img/maggi100.avif" },
-    { id: "12482812", name: "MAGGI® Jugo Sazonador 6x800ml N1 MX", brand: "Nestlé", category: "culinarios", format: "Charola con 6 x 800 ml", clave: "12482812", desc: "Presentación ideal para restaurantes y taquerías.", img: "img/maggi800.png" },
-    { id: "12483742", name: "MAGGI® Jugo Sazonador 4x1.9L N1 MX", brand: "Nestlé", category: "culinarios", format: "Caja con 4 x 1.9 L", clave: "12483742", desc: "Formato institucional gran volumen.", img: "img/maggi19.jpeg" },
-    { id: "12610005", name: "MAGGI® Jugo Sazonador Alfarero 24x200ml MX", brand: "Nestlé", category: "culinarios", format: "Charola con 24 x 200 ml", clave: "12610005", desc: "Sazonador líquido edición Alfarero.", img: "img/maggi100.avif" },
-    { id: "12566059", name: "MAGGI® Mezclador Miche 4x1.9L MX", brand: "Nestlé", category: "culinarios", format: "Charola con 4 x 1.9 L", clave: "12566059", desc: "Mezcla sazonadora especial para micheladas y coctelería.", img: "img/maggimixer19.jpeg" },
-    { id: "12482612", name: "CROSSE & BLACKWELL® Salsa Inglesa 24x145ml MX", brand: "Nestlé", category: "culinarios", format: "Charola con 24 x 145 ml", clave: "12482612", desc: "Salsa tipo inglesa sabor tradicional.", img: "img/inglesa145.webp" },
-    { id: "12610006", name: "CROSSE & BLACKWELL® Salsa Inglesa 24x290ml N1 MX", brand: "Nestlé", category: "culinarios", format: "Charola con 24 x 290 ml", clave: "12610006", desc: "Salsa tipo inglesa sabor tradicional 290ml.", img: "img/inglesa145.webp" },
-    { id: "12532559", name: "C&B Salsa Inglesa 6x980ml N1 MX", brand: "Nestlé", category: "culinarios", format: "Charola con 6 x 980 ml", clave: "12532559", desc: "Salsa tipo inglesa en botella de 980ml.", img: "img/inglesa980.webp" },
-    { id: "12482715", name: "CROSSE & BLACKWELL® Salsa Inglesa 4x1.9L N1 MX", brand: "Nestlé", category: "culinarios", format: "Charola con 4 x 1.9 L", clave: "12482715", desc: "Salsa tipo inglesa formato 1.9L.", img: "img/inglesa19.webp" },
+      // --- NESCAFÉ & BEBIDAS ---
+      { id: "12610001", name: "NESCAFÉ® CLÁSICO® Dawn Jar MYW 12x200g MX", brand: "Nestlé", category: "nescafe", format: "Caja con 12 frascos x 200 g", clave: "12610001", desc: "Café 100% soluble en frasco de vidrio.", img: "img/cafebolsa400.webp" },
+      { id: "12610002", name: "NESCAFÉ® CLÁSICO® MYW 16x42g MX", brand: "Nestlé", category: "nescafe", format: "Caja con 16 frascos x 42 g", clave: "12610002", desc: "Café soluble instantáneo presentación compacta.", img: "img/nescafeclasico42gm.webp" },
+      { id: "12221711", name: "NESCAFÉ® CLÁSICO® Npro Lata 4x1kg MX", brand: "Nestlé", category: "nescafe", format: "Charola con 4 latas de 1 kg", clave: "12221711", desc: "Café 100% soluble. Rinde 500 tazas por lata.", img: "img/lata1kg.jpg" },
+      { id: "8503097", name: "NESCAFÉ® CLÁSICO® Stick 18(50x2g) MX", brand: "Nestlé", category: "nescafe", format: "Caja con 18 estuches de 50 sticks", clave: "8503097", desc: "Sobres individuales de 2g.", img: "img/clasico50.png" },
+      { id: "12610003", name: "NESCAFÉ® CLÁSICO® Stick MYW MP6(16x14g) MX", brand: "Nestlé", category: "nescafe", format: "Caja con 6 paquetes (16 sticks x 14g)", clave: "12610003", desc: "Sticks de café soluble porción individual.", img: "img/clasico50.png" },
+      { id: "12610004", name: "NESCAFÉ® CLÁSICO® MYW 12x120g MX", brand: "Nestlé", category: "nescafe", format: "Caja con 12 frascos x 120 g", clave: "12610004", desc: "Café soluble instantáneo rinde múltiples tazas.", img: "img/cafebolsa400.webp" },
+      { id: "8500297", name: "NESCAFÉ® CLÁSICO® 5kg MX", brand: "Nestlé", category: "nescafe", format: "Caja con 1 bolsa de 5 kg", clave: "8500297", desc: "Formato gigante para dispensadores.", img: "img/5kg.webp" },
+      { id: "12577170", name: "CFMT Orig Stick Chronos Fs 6(200x4g) MX", brand: "Nestlé", category: "nescafe", format: "Caja con 6 estuches con 200 sticks de 4g", clave: "12577170", desc: "Sticks individuales de sustituto de crema Coffee-Mate®.", img: "img/cofemate.webp" },
+      { id: "12610007", name: "COFFEE-MATE® Original 12x311g N1 MX", brand: "Nestlé", category: "nescafe", format: "Caja con 12 botes x 311 g", clave: "12610007", desc: "Sustituto de crema en polvo sabor original.", img: "img/cofe311gm.webp" },
+      { id: "12610008", name: "COFFEE-MATE® Original Botella 12x400g N1 MX", brand: "Nestlé", category: "nescafe", format: "Caja con 12 botellas x 400 g", clave: "12610008", desc: "Sustituto de crema en botella plástica.", img: "img/cofe400gm.jpg" },
+      { id: "12610009", name: "COFFEE-MATE® Original Lata 6x1.2kg N2 MX", brand: "Nestlé", category: "nescafe", format: "Charola con 6 latas de 1.2 kg", clave: "12610009", desc: "Sustituto de crema en lata rendidora.", img: "img/coffelata1.2.webp" },
+      { id: "12610010", name: "COFFEE-MATE® Regular Botella 12x160g N1 MX", brand: "Nestlé", category: "nescafe", format: "Caja con 12 botellas x 160 g", clave: "12610010", desc: "Sustituto de crema en polvo tamaño compacto.", img: "img/cofemate.webp" },
+      { id: "12535076", name: "NESQUIK® Chocolate Polvo Cuñete 5kg", brand: "Nestlé", category: "nescafe", format: "Caja/Cuñete de 5 kg", clave: "12535076", desc: "Polvo para bebida sabor chocolate.", img: "img/polvo5kg.webp" },
 
-    // --- CHOCOLATES ---
-    { id: "12280329", name: "CARLOS V® Chocolate Bolsa 4x2.5kg MX", brand: "Nestlé", category: "chocolates", format: "Caja con 4 x 2.5 Kg c/u", clave: "12280329", desc: "Bloque de cobertura sabor chocolate con leche.", img: "img/carlos25.webp" },
-    { id: "12577524", name: "CARLOS V® Mix Brownie 10x1kg MX", brand: "Nestlé", category: "chocolates", format: "Caja con 10 x 1 Kg c/u", clave: "12577524", desc: "Harina preparada para brownies de chocolate.", img: "img/carlosharina1.jpg" },
-    { id: "12568422", name: "CARLOS V® Untable 2x4kg MX", brand: "Nestlé", category: "chocolates", format: "Caja con 2 x 4 Kg c/u", clave: "12568422", desc: "Crema de cacao sabor Carlos V®.", img: "img/carlos4kg.png" },
-    { id: "12568176", name: "CARLOS V® Blanco Untable 2x4kg MX", brand: "Nestlé", category: "chocolates", format: "Caja con 2 x 4 Kg c/u", clave: "12568176", desc: "Crema sabor chocolate blanco.", img: "img/carlosblanco4.png" },
-    { id: "12610011", name: "CRUNCH® Rocks Chocolate Bolsa 4x2.5kg MX", brand: "Nestlé", category: "chocolates", format: "Caja con 4 bolsas x 2.5 kg", clave: "12610011", desc: "Trozos crujientes de chocolate con arroz inflado.", img: "img/crunch38.webp" },
-    { id: "12610016", name: "ABUELITA® Chocolate Granulado 24x320g N1 MX", brand: "Nestlé", category: "chocolates", format: "Caja con 24 bolsas de 320 g", clave: "12610016", desc: "Chocolate granulado sabor canela disolución rápida.", img: "img/chocoabue1kg.png" },
-    { id: "12279053", name: "ABUELITA® Chocolate Granulado 8x1kg MX", brand: "Nestlé", category: "chocolates", format: "Caja con 8 bolsas de 1 kg c/u", clave: "12279053", desc: "Chocolate granulado para disolver.", img: "img/chocoabue1kg.png" },
-    { id: "12610017", name: "ABUELITA® Tableta 24x540g MX", brand: "Nestlé", category: "chocolates", format: "Caja con 24 cajas de 540 g", clave: "12610017", desc: "Tableta de chocolate para mesa tradicional.", img: "img/chocoabue216.jpeg" },
-    { id: "12340733", name: "ABUELITA® Chocolate Tableta 6x2.160kg MX", brand: "Nestlé", category: "chocolates", format: "Caja con 6 x 2.160 Kg c/u", clave: "12340733", desc: "Chocolate para mesa tradicional con canela.", img: "img/chocoabue216.jpeg" },
-    { id: "12568194", name: "ABUELITA® Untable 2x4kg MX", brand: "Nestlé", category: "chocolates", format: "Caja con 2 x 4 Kg c/u", clave: "12568194", desc: "Crema de cacao sabor a canela Abuelita®.", img: "img/chocoabue4kg.webp" },
-    { id: "12610018", name: "MORELIA PRESIDENCIAL® Choc Plv Bsa 10x700g N2 MX", brand: "Nestlé", category: "chocolates", format: "Caja con 10 bolsas de 700 g", clave: "12610018", desc: "Polvo para bebida sabor chocolate tradicional.", img: "img/chocoabue1kg.png" },
-    { id: "12610019", name: "MORELIA PRESIDENCIAL® Plv Choc Bsa 24x357g N1 MX", brand: "Nestlé", category: "chocolates", format: "Caja con 24 bolsas de 357 g", clave: "12610019", desc: "Polvo para bebida sabor chocolate bolsa 357g.", img: "img/chocoabue1kg.png" }
-  ];
+      // --- CULINARIOS ---
+      { id: "12479580", name: "MAGGI® Jugo Sazonador 24x100ml MX", brand: "Nestlé", category: "culinarios", format: "Charola con 24 x 100 ml", clave: "12479580", desc: "Sazonador líquido concentrado para carnes, sopas y botanas.", img: "img/maggi100.avif" },
+      { id: "12482812", name: "MAGGI® Jugo Sazonador 6x800ml N1 MX", brand: "Nestlé", category: "culinarios", format: "Charola con 6 x 800 ml", clave: "12482812", desc: "Presentación ideal para restaurantes y taquerías.", img: "img/maggi800.png" },
+      { id: "12483742", name: "MAGGI® Jugo Sazonador 4x1.9L N1 MX", brand: "Nestlé", category: "culinarios", format: "Caja con 4 x 1.9 L", clave: "12483742", desc: "Formato institucional gran volumen.", img: "img/maggi19.jpeg" },
+      { id: "12610005", name: "MAGGI® Jugo Sazonador Alfarero 24x200ml MX", brand: "Nestlé", category: "culinarios", format: "Charola con 24 x 200 ml", clave: "12610005", desc: "Sazonador líquido edición Alfarero.", img: "img/maggi100.avif" },
+      { id: "12566059", name: "MAGGI® Mezclador Miche 4x1.9L MX", brand: "Nestlé", category: "culinarios", format: "Charola con 4 x 1.9 L", clave: "12566059", desc: "Mezcla sazonadora especial para micheladas y coctelería.", img: "img/maggimixer19.jpeg" },
+      { id: "12482612", name: "CROSSE & BLACKWELL® Salsa Inglesa 24x145ml MX", brand: "Nestlé", category: "culinarios", format: "Charola con 24 x 145 ml", clave: "12482612", desc: "Salsa tipo inglesa sabor tradicional.", img: "img/inglesa145.webp" },
+      { id: "12610006", name: "CROSSE & BLACKWELL® Salsa Inglesa 24x290ml N1 MX", brand: "Nestlé", category: "culinarios", format: "Charola con 24 x 290 ml", clave: "12610006", desc: "Salsa tipo inglesa sabor tradicional 290ml.", img: "img/inglesa145.webp" },
+      { id: "12532559", name: "C&B Salsa Inglesa 6x980ml N1 MX", brand: "Nestlé", category: "culinarios", format: "Charola con 6 x 980 ml", clave: "12532559", desc: "Salsa tipo inglesa en botella de 980ml.", img: "img/inglesa980.webp" },
+      { id: "12482715", name: "CROSSE & BLACKWELL® Salsa Inglesa 4x1.9L N1 MX", brand: "Nestlé", category: "culinarios", format: "Charola con 4 x 1.9 L", clave: "12482715", desc: "Salsa tipo inglesa formato 1.9L.", img: "img/inglesa19.webp" },
 
-  // Estado del Carrito (Guardado en localStorage)
-  let cart = JSON.parse(localStorage.getItem('taq_cart_v1')) || [];
+      // --- CHOCOLATES ---
+      { id: "12280329", name: "CARLOS V® Chocolate Bolsa 4x2.5kg MX", brand: "Nestlé", category: "chocolates", format: "Caja con 4 x 2.5 Kg c/u", clave: "12280329", desc: "Bloque de cobertura sabor chocolate con leche.", img: "img/carlos25.webp" },
+      { id: "12577524", name: "CARLOS V® Mix Brownie 10x1kg MX", brand: "Nestlé", category: "chocolates", format: "Caja con 10 x 1 Kg c/u", clave: "12577524", desc: "Harina preparada para brownies de chocolate.", img: "img/carlosharina1.jpg" },
+      { id: "12568422", name: "CARLOS V® Untable 2x4kg MX", brand: "Nestlé", category: "chocolates", format: "Caja con 2 x 4 Kg c/u", clave: "12568422", desc: "Crema de cacao sabor Carlos V®.", img: "img/carlos4kg.png" },
+      { id: "12568176", name: "CARLOS V® Blanco Untable 2x4kg MX", brand: "Nestlé", category: "chocolates", format: "Caja con 2 x 4 Kg c/u", clave: "12568176", desc: "Crema sabor chocolate blanco.", img: "img/carlosblanco4.png" },
+      { id: "12610011", name: "CRUNCH® Rocks Chocolate Bolsa 4x2.5kg MX", brand: "Nestlé", category: "chocolates", format: "Caja con 4 bolsas x 2.5 kg", clave: "12610011", desc: "Trozos crujientes de chocolate con arroz inflado.", img: "img/crunch38.webp" },
+      { id: "12610016", name: "ABUELITA® Chocolate Granulado 24x320g N1 MX", brand: "Nestlé", category: "chocolates", format: "Caja con 24 bolsas de 320 g", clave: "12610016", desc: "Chocolate granulado sabor canela disolución rápida.", img: "img/chocoabue1kg.png" },
+      { id: "12279053", name: "ABUELITA® Chocolate Granulado 8x1kg MX", brand: "Nestlé", category: "chocolates", format: "Caja con 8 bolsas de 1 kg c/u", clave: "12279053", desc: "Chocolate granulado para disolver.", img: "img/chocoabue1kg.png" },
+      { id: "12610017", name: "ABUELITA® Tableta 24x540g MX", brand: "Nestlé", category: "chocolates", format: "Caja con 24 cajas de 540 g", clave: "12610017", desc: "Tableta de chocolate para mesa tradicional.", img: "img/chocoabue216.jpeg" },
+      { id: "12340733", name: "ABUELITA® Chocolate Tableta 6x2.160kg MX", brand: "Nestlé", category: "chocolates", format: "Caja con 6 x 2.160 Kg c/u", clave: "12340733", desc: "Chocolate para mesa tradicional con canela.", img: "img/chocoabue216.jpeg" },
+      { id: "12568194", name: "ABUELITA® Untable 2x4kg MX", brand: "Nestlé", category: "chocolates", format: "Caja con 2 x 4 Kg c/u", clave: "12568194", desc: "Crema de cacao sabor a canela Abuelita®.", img: "img/chocoabue4kg.webp" },
+      { id: "12610018", name: "MORELIA PRESIDENCIAL® Choc Plv Bsa 10x700g N2 MX", brand: "Nestlé", category: "chocolates", format: "Caja con 10 bolsas de 700 g", clave: "12610018", desc: "Polvo para bebida sabor chocolate tradicional.", img: "img/chocoabue1kg.png" },
+      { id: "12610019", name: "MORELIA PRESIDENCIAL® Plv Choc Bsa 24x357g N1 MX", brand: "Nestlé", category: "chocolates", format: "Caja con 24 bolsas de 357 g", clave: "12610019", desc: "Polvo para bebida sabor chocolate bolsa 357g.", img: "img/chocoabue1kg.png" }
+    ];
 
-  document.addEventListener('DOMContentLoaded', function() {
-    renderProducts(productsData);
-    updateCartUI();
+    // Estado del Carrito (Guardado en localStorage)
+    let cart = JSON.parse(localStorage.getItem('taq_cart_v1')) || [];
 
-    // Eventos de búsqueda y filtro
-    const searchInput = document.getElementById('searchInput');
-    const filterBtns = document.querySelectorAll('.filter-btn');
-    const btnResetSearch = document.getElementById('btnResetSearch');
+    document.addEventListener('DOMContentLoaded', function () {
+      renderProducts(productsData);
+      updateCartUI();
 
-    let currentFilter = 'all';
+      // Eventos de búsqueda y filtro
+      const searchInput = document.getElementById('searchInput');
+      const filterBtns = document.querySelectorAll('.filter-btn');
+      const btnResetSearch = document.getElementById('btnResetSearch');
 
-    function applyFilterAndSearch() {
-      const term = searchInput.value.toLowerCase().trim();
-      const filtered = productsData.filter(p => {
-        const matchesFilter = (currentFilter === 'all') || (p.category === currentFilter);
-        const matchesSearch = !term || p.name.toLowerCase().includes(term) || p.clave.toLowerCase().includes(term) || p.brand.toLowerCase().includes(term);
-        return matchesFilter && matchesSearch;
+      let currentFilter = 'all';
+
+      function applyFilterAndSearch() {
+        const term = searchInput.value.toLowerCase().trim();
+        const filtered = productsData.filter(p => {
+          const matchesFilter = (currentFilter === 'all') || (p.category === currentFilter);
+          const matchesSearch = !term || p.name.toLowerCase().includes(term) || p.clave.toLowerCase().includes(term) || p.brand.toLowerCase().includes(term);
+          return matchesFilter && matchesSearch;
+        });
+
+        renderProducts(filtered);
+
+        const noResults = document.getElementById('noResults');
+        if (filtered.length === 0) {
+          noResults.classList.remove('d-none');
+        } else {
+          noResults.classList.add('d-none');
+        }
+      }
+
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', function () {
+          filterBtns.forEach(b => b.classList.remove('active'));
+          this.classList.add('active');
+          currentFilter = this.getAttribute('data-filter');
+          applyFilterAndSearch();
+        });
       });
 
-      renderProducts(filtered);
+      searchInput.addEventListener('input', applyFilterAndSearch);
 
-      const noResults = document.getElementById('noResults');
-      if (filtered.length === 0) {
-        noResults.classList.remove('d-none');
-      } else {
-        noResults.classList.add('d-none');
+      if (btnResetSearch) {
+        btnResetSearch.addEventListener('click', function () {
+          searchInput.value = '';
+          currentFilter = 'all';
+          filterBtns.forEach(b => b.classList.remove('active'));
+          filterBtns[0].classList.add('active');
+          applyFilterAndSearch();
+        });
       }
-    }
 
-    filterBtns.forEach(btn => {
-      btn.addEventListener('click', function() {
-        filterBtns.forEach(b => b.classList.remove('active'));
-        this.classList.add('active');
-        currentFilter = this.getAttribute('data-filter');
-        applyFilterAndSearch();
+      // Botón vaciar carrito
+      document.getElementById('btnClearCart').addEventListener('click', function () {
+        if (cart.length === 0) return;
+        if (confirm('¿Deseas vaciar todos los productos del carrito?')) {
+          cart = [];
+          saveCart();
+          updateCartUI();
+        }
+      });
+
+      // Botón enviar WhatsApp (Número 7716774014)
+      document.getElementById('btnSendWhatsappCart').addEventListener('click', function () {
+        if (cart.length === 0) {
+          alert('Tu carrito está vacío. Agrega productos para solicitar tu cotización.');
+          return;
+        }
+
+        const clientName = document.getElementById('cartClientName').value.trim() || 'No especificado';
+        const clientCity = document.getElementById('cartClientCity').value.trim() || 'No especificada';
+
+        let message = `*SOLICITUD DE COTIZACIÓN - TAQ DISTRIBUIDORA*%0A%0A`;
+        message += `👤 *Cliente / Empresa:* ${encodeURIComponent(clientName)}%0A`;
+        message += `📍 *Destino de Entrega:* ${encodeURIComponent(clientCity)}%0A%0A`;
+        message += `📋 *LISTA DE PRODUCTOS SOLICITADOS:*%0A`;
+
+        cart.forEach((item, index) => {
+          message += `%0A*${index + 1}. ${encodeURIComponent(item.name)}*%0A`;
+          message += `   • Clave: ${encodeURIComponent(item.clave)}%0A`;
+          message += `   • Formato: ${encodeURIComponent(item.format)}%0A`;
+          message += `   • Cantidad: *${item.quantity} unidades/cajas*%0A`;
+        });
+
+        message += `%0A------------------------------------%0A`;
+        message += `Quedo a la espera de la cotización formal y tiempos de entrega. ¡Gracias!`;
+
+        // Número WhatsApp oficial de cotización: 7716774014
+        const whatsappUrl = `https://wa.me/527716774014?text=${message}`;
+        window.open(whatsappUrl, '_blank');
       });
     });
 
-    searchInput.addEventListener('input', applyFilterAndSearch);
+    // Renderizar la lista de productos
+    function renderProducts(list) {
+      const grid = document.getElementById('productsGrid');
+      const productCount = document.getElementById('productCount');
 
-    if (btnResetSearch) {
-      btnResetSearch.addEventListener('click', function() {
-        searchInput.value = '';
-        currentFilter = 'all';
-        filterBtns.forEach(b => b.classList.remove('active'));
-        filterBtns[0].classList.add('active');
-        applyFilterAndSearch();
-      });
-    }
+      productCount.textContent = `${list.length} producto${list.length !== 1 ? 's' : ''} en catálogo`;
+      grid.innerHTML = '';
 
-    // Botón vaciar carrito
-    document.getElementById('btnClearCart').addEventListener('click', function() {
-      if (cart.length === 0) return;
-      if (confirm('¿Deseas vaciar todos los productos del carrito?')) {
-        cart = [];
-        saveCart();
-        updateCartUI();
-      }
-    });
+      list.forEach(p => {
+        const isNestle = p.brand === 'Nestlé';
+        const badgeClass = isNestle ? 'badge-nestle' : 'badge-secondary';
 
-    // Botón enviar WhatsApp (Número 7716774014)
-    document.getElementById('btnSendWhatsappCart').addEventListener('click', function() {
-      if (cart.length === 0) {
-        alert('Tu carrito está vacío. Agrega productos para solicitar tu cotización.');
-        return;
-      }
-
-      const clientName = document.getElementById('cartClientName').value.trim() || 'No especificado';
-      const clientCity = document.getElementById('cartClientCity').value.trim() || 'No especificada';
-
-      let message = `*SOLICITUD DE COTIZACIÓN - TAQ DISTRIBUIDORA*%0A%0A`;
-      message += `👤 *Cliente / Empresa:* ${encodeURIComponent(clientName)}%0A`;
-      message += `📍 *Destino de Entrega:* ${encodeURIComponent(clientCity)}%0A%0A`;
-      message += `📋 *LISTA DE PRODUCTOS SOLICITADOS:*%0A`;
-
-      cart.forEach((item, index) => {
-        message += `%0A*${index + 1}. ${encodeURIComponent(item.name)}*%0A`;
-        message += `   • Clave: ${encodeURIComponent(item.clave)}%0A`;
-        message += `   • Formato: ${encodeURIComponent(item.format)}%0A`;
-        message += `   • Cantidad: *${item.quantity} unidades/cajas*%0A`;
-      });
-
-      message += `%0A------------------------------------%0A`;
-      message += `Quedo a la espera de la cotización formal y tiempos de entrega. ¡Gracias!`;
-
-      // Número WhatsApp oficial de cotización: 7716774014
-      const whatsappUrl = `https://wa.me/527716774014?text=${message}`;
-      window.open(whatsappUrl, '_blank');
-    });
-  });
-
-  // Renderizar la lista de productos
-  function renderProducts(list) {
-    const grid = document.getElementById('productsGrid');
-    const productCount = document.getElementById('productCount');
-
-    productCount.textContent = `${list.length} producto${list.length !== 1 ? 's' : ''} en catálogo`;
-    grid.innerHTML = '';
-
-    list.forEach(p => {
-      const isNestle = p.brand === 'Nestlé';
-      const badgeClass = isNestle ? 'badge-nestle' : 'badge-secondary';
-
-      const col = document.createElement('div');
-      col.className = 'col-md-6 col-lg-3';
-      col.innerHTML = `
+        const col = document.createElement('div');
+        col.className = 'col-md-6 col-lg-3';
+        col.innerHTML = `
         <div class="card card-prod h-100">
           <img src="${p.img}" class="card-img-top" alt="${p.name}">
           <div class="card-body d-flex flex-column justify-content-between">
@@ -511,81 +574,81 @@
           </div>
         </div>
       `;
-      grid.appendChild(col);
-    });
-  }
-
-  // Funciones del Carrito
-  function addToCart(productId) {
-    const product = productsData.find(p => p.id === productId);
-    if (!product) return;
-
-    const existingIndex = cart.findIndex(item => item.id === productId);
-    if (existingIndex > -1) {
-      cart[existingIndex].quantity += 1;
-    } else {
-      cart.push({
-        id: product.id,
-        name: product.name,
-        brand: product.brand,
-        clave: product.clave,
-        format: product.format,
-        quantity: 1
+        grid.appendChild(col);
       });
     }
 
-    saveCart();
-    updateCartUI();
+    // Funciones del Carrito
+    function addToCart(productId) {
+      const product = productsData.find(p => p.id === productId);
+      if (!product) return;
 
-    // Abrir el canvas del carrito automáticamente al agregar
-    const bsOffcanvas = bootstrap.Offcanvas.getOrCreateInstance(document.getElementById('cartOffcanvas'));
-    bsOffcanvas.show();
-  }
-
-  function changeQuantity(productId, delta) {
-    const index = cart.findIndex(item => item.id === productId);
-    if (index > -1) {
-      cart[index].quantity += delta;
-      if (cart[index].quantity <= 0) {
-        cart.splice(index, 1);
+      const existingIndex = cart.findIndex(item => item.id === productId);
+      if (existingIndex > -1) {
+        cart[existingIndex].quantity += 1;
+      } else {
+        cart.push({
+          id: product.id,
+          name: product.name,
+          brand: product.brand,
+          clave: product.clave,
+          format: product.format,
+          quantity: 1
+        });
       }
+
+      saveCart();
+      updateCartUI();
+
+      // Abrir el canvas del carrito automáticamente al agregar
+      const bsOffcanvas = bootstrap.Offcanvas.getOrCreateInstance(document.getElementById('cartOffcanvas'));
+      bsOffcanvas.show();
+    }
+
+    function changeQuantity(productId, delta) {
+      const index = cart.findIndex(item => item.id === productId);
+      if (index > -1) {
+        cart[index].quantity += delta;
+        if (cart[index].quantity <= 0) {
+          cart.splice(index, 1);
+        }
+        saveCart();
+        updateCartUI();
+      }
+    }
+
+    function removeFromCart(productId) {
+      cart = cart.filter(item => item.id !== productId);
       saveCart();
       updateCartUI();
     }
-  }
 
-  function removeFromCart(productId) {
-    cart = cart.filter(item => item.id !== productId);
-    saveCart();
-    updateCartUI();
-  }
+    function saveCart() {
+      localStorage.setItem('taq_cart_v1', JSON.stringify(cart));
+    }
 
-  function saveCart() {
-    localStorage.setItem('taq_cart_v1', JSON.stringify(cart));
-  }
+    function updateCartUI() {
+      const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
 
-  function updateCartUI() {
-    const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+      document.getElementById('navCartCount').textContent = totalItems;
+      document.getElementById('floatingCartCount').textContent = totalItems;
 
-    document.getElementById('navCartCount').textContent = totalItems;
-    document.getElementById('floatingCartCount').textContent = totalItems;
+      const cartList = document.getElementById('cartItemsList');
 
-    const cartList = document.getElementById('cartItemsList');
-
-    if (cart.length === 0) {
-      cartList.innerHTML = `
+      if (cart.length === 0) {
+        cartList.innerHTML = `
         <div class="text-center py-5 text-muted">
           <i class="bi bi-cart-x fs-1 opacity-50"></i>
           <p class="mt-3 mb-0 fw-semibold">Tu carrito de cotización está vacío</p>
           <small>Explora los productos del catálogo y agrégalos aquí.</small>
         </div>
       `;
-      return;
-    }
+        return;
+      }
 
-    let html = '<div class="d-flex flex-column gap-3">';
-    cart.forEach(item => {
-      html += `
+      let html = '<div class="d-flex flex-column gap-3">';
+      cart.forEach(item => {
+        html += `
         <div class="bg-white p-3 rounded-4 border shadow-sm d-flex justify-content-between align-items-center">
           <div>
             <span class="badge bg-light text-dark border me-1">Clave: ${item.clave}</span>
@@ -604,11 +667,12 @@
           </div>
         </div>
       `;
-    });
-    html += '</div>';
+      });
+      html += '</div>';
 
-    cartList.innerHTML = html;
-  }
-</script>
+      cartList.innerHTML = html;
+    }
+  </script>
 </body>
+
 </html>
